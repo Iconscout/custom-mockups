@@ -1,6 +1,6 @@
 # iconscout-mockups
 
-> My astonishing Nuxt.js project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e74fb177-5561-43e8-b523-9d003eedf9b9/deploy-status)](https://app.netlify.com/sites/iconscout-mockups/deploys)
 
 ## Build Setup
 
