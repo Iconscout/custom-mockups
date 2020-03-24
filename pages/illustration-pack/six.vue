@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">Sporty</h1>
+        <h1 class="title">{{ $route.query.title }}</h1>
         <p class="subtitle">Modern Illustration</p>
         <p class="desc">20 crafted scences illustration 10 prebuild screens</p>
 
@@ -14,12 +14,12 @@
         </div>
       </div>
       <div class="bg"></div>
-      <div class="preview">
-        <img
-          src="https://cdni.iconscout.com/illustration/premium/thumb/connect-with-friend-via-social-network-2182956-1832286.png"
-          class="img"
-        />
-      </div>
+      <div
+        class="preview"
+        :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+      />
     </div>
   </div>
 </template>
@@ -122,15 +122,12 @@ body {
 }
 
 .preview {
-  object-fit: contain;
-  max-width: 460px;
-  max-height: 400px;
-  padding: 90px 0;
+  width: 460px;
+  height: 400px;
+  margin: 30px 0;
   z-index: 10;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>
