@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">Illustration Pack</h1>
+        <h1 class="title">{{ $route.query.title }}</h1>
         <p class="desc">Create a unique illustration for a website, application, or presentation.</p>
         <div class="btnGroup">
           <button class="btn">.AI</button>
@@ -11,38 +11,38 @@
           <button class="btn">.PNG</button>
         </div>
       </div>
-      <div class="heroImg">
-        <img
-          src="https://cdni.iconscout.com/illustration/premium/thumb/discussing-in-library-2161952-1816244.png"
-          class="img"
-        />
-      </div>
+      <div
+        class="heroImg"
+        :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+      />
     </div>
     <div class="imgGrid">
-      <div class="wrapper">
-        <img
-          class="img"
-          src="https://cdni.iconscout.com/illustration/premium/thumb/architect-showing-blueprint-of-construction-site-and-planning-2130015-1798025.png"
-        />
-      </div>
-      <div class="wrapper">
-        <img
-          class="img"
-          src="https://cdni.iconscout.com/illustration/premium/thumb/architect-showing-blueprint-of-construction-site-and-planning-2130015-1798025.png"
-        />
-      </div>
-      <div class="wrapper">
-        <img
-          class="img"
-          src="https://cdni.iconscout.com/illustration/premium/thumb/architect-showing-blueprint-of-construction-site-and-planning-2130015-1798025.png"
-        />
-      </div>
-      <div class="wrapper">
-        <img
-          class="img"
-          src="https://cdni.iconscout.com/illustration/premium/thumb/architect-showing-blueprint-of-construction-site-and-planning-2130015-1798025.png"
-        />
-      </div>
+      <div
+        class="wrapper"
+        :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+      />
+      <div
+        class="wrapper"
+        :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+      />
+      <div
+        class="wrapper"
+        :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }"
+      />
+      <div
+        class="wrapper"
+        :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+      />
     </div>
   </div>
 </template>
@@ -116,18 +116,16 @@ body {
 }
 
 .heroImg {
-  max-width: 500px;
+  width: 500px;
   height: 251px;
-  object-fit: cover;
-  padding: 90px 0 0 0;
+  margin: 40px 0 0 0;
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .imgGrid {
@@ -140,5 +138,8 @@ body {
 .wrapper {
   width: 150px;
   height: 110px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

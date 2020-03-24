@@ -2,48 +2,48 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">Zapata</h1>
+        <h1 class="title">{{ $route.query.title }}</h1>
         <p class="subtitle">Simple Look Line Illustration</p>
       </div>
       <div class="firstColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+        />
       </div>
       <div class="secondColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-examining-the-patient-medical-report-2120244-1784705.png"
-          />
-        </div>
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+        />
       </div>
     </div>
   </div>
@@ -123,12 +123,9 @@ body {
   width: 220px;
   height: 154px;
   margin: 10px 0;
-  object-fit: contain;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

@@ -1,28 +1,29 @@
 <template>
   <div class="container">
-    <h1 class="title">Tech <span class="selections">illustrations</span></h1>
-    <p class="desc">
-      A set of well crafted-tech illustrations for your web and app projects.
-    </p>
+    <h1 class="title">
+      {{ $route.query.title }}
+      <span class="selections">illustrations</span>
+    </h1>
+    <p class="desc">A set of well crafted-tech illustrations for your web and app projects.</p>
     <div class="wrapper">
-      <div class="preview">
-        <img
-          src="https://cdni.iconscout.com/illustration/free/thumb/thinking-woman-1840996-1561502.png"
-          class="img"
-        />
-      </div>
-      <div class="preview">
-        <img
-          src="https://cdni.iconscout.com/illustration/free/thumb/two-girls-gossiping-1841002-1561508.png"
-          class="img"
-        />
-      </div>
-      <div class="preview">
-        <img
-          src="https://cdni.iconscout.com/illustration/free/thumb/young-girl-taking-selfie-in-her-phone-1840999-1561505.png"
-          class="img"
-        />
-      </div>
+      <div
+        class="preview"
+        :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+      />
+      <div
+        class="preview"
+        :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+      />
+      <div
+        class="preview"
+        :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+      />
     </div>
   </div>
 </template>
@@ -86,11 +87,8 @@ body {
 .preview {
   width: 200px;
   height: 200px;
-  object-fit: cover;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

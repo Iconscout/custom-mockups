@@ -2,53 +2,53 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">Splashy Illustrations</h1>
+        <h1 class="title">{{ $route.query.title }}</h1>
       </div>
-      <div class="wrapper last">
-        <img
-          class="img"
-          src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
+      <div
+        class="wrapper last"
+        :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }"
+      />
+      <div class="firstColumn">
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }"
         />
       </div>
-      <div class="firstColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-      </div>
       <div class="secondColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+        />
       </div>
     </div>
   </div>
@@ -124,11 +124,8 @@ body {
   width: 200px;
   height: 142px;
   margin: 30px 0;
-  object-fit: contain;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

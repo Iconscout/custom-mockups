@@ -3,7 +3,7 @@
     <div class="main">
       <div class="content">
         <div class="text">
-          <h1 class="title">3D Illustration Pack</h1>
+          <h1 class="title">{{ $route.query.title }}</h1>
           <ul>
             <li>20 main scences</li>
             <li>5 bouns mockup</li>
@@ -13,64 +13,37 @@
         </div>
       </div>
       <div class="firstColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }" />
       </div>
       <div class="secondColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }" />
       </div>
       <div class="thirdColumn">
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
-        <div class="wrapper">
-          <img
-            class="img"
-            src="https://cdni.iconscout.com/illustration/free/thumb/science-law-1970126-1662903.png"
-          />
-        </div>
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[0]})`,
+              }" />
       </div>
     </div>
   </div>
@@ -170,12 +143,9 @@ ul {
   width: 161px;
   height: 161px;
   margin: 20px 0;
-  object-fit: contain;
-}
-
-.img {
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>
