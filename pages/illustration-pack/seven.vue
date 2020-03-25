@@ -3,13 +3,8 @@
     <div class="main">
       <div class="content">
         <div class="text">
-          <h1 class="title">{{ $route.query.title }}</h1>
-          <ul>
-            <li>20 main scences</li>
-            <li>5 bouns mockup</li>
-            <li>PNG with & without background</li>
-            <li>Different pose</li>
-          </ul>
+          <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+          <p class="desc">{{ $route.query.description }}</p>
         </div>
       </div>
       <div class="firstColumn">
@@ -93,7 +88,7 @@ body {
   font-weight: 600;
   font-size: 40px;
   line-height: 46px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-family: 'Times New Roman', Times, serif;
   width: 324px;
 }
@@ -108,10 +103,11 @@ body {
   width: 330px;
 }
 
-ul {
-  font-weight: normal;
-  padding-left: 20px;
-  opacity: 0.8;
+.desc {
+  font-size: 12px;
+  line-height: 21px;
+  color: #fff;
+  padding-bottom: 17px;
 }
 
 .text {

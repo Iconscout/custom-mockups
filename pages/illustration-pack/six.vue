@@ -2,9 +2,8 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }}</h1>
-        <p class="subtitle">Modern Illustration</p>
-        <p class="desc">20 crafted scences illustration 10 prebuild screens</p>
+        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <p class="desc">{{ $route.query.description }}</p>
 
         <div class="pattern">
           <img src="@/assets/images/red-dots.svg" height="80" />
@@ -72,11 +71,11 @@ body {
 }
 
 .content {
-  padding: 0 63px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 153px;
+  width: 250px;
 }
 
 .name {

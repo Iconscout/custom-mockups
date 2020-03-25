@@ -2,8 +2,8 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }}</h1>
-        <p class="subtitle">Simple Look Line Illustration</p>
+        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <p class="subtitle">{{ $route.query.description }}</p>
       </div>
       <div class="firstColumn">
         <div
@@ -85,14 +85,14 @@ body {
 }
 
 .content {
-  padding: 60px 0 60px 60px;
+  padding: 60px 0 60px 40px;
   width: 50%;
 }
 
 .title {
   margin-top: 30px;
   font-weight: bold;
-  font-size: 58px;
+  font-size: 40px;
   line-height: 116.4%;
   letter-spacing: 0.06em;
   color: #7352ff;
@@ -101,7 +101,7 @@ body {
 .subtitle {
   padding: 13px 0;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 135%;
   letter-spacing: 0.05em;
   color: #626466;

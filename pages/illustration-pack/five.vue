@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }}</h1>
+        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
       </div>
       <div
         class="wrapper last"
@@ -90,7 +90,7 @@ body {
 }
 
 .content {
-  padding: 50px 0 50px 42px;
+  padding: 50px 0 50px 40px;
   width: 50%;
 }
 

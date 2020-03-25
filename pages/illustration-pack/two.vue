@@ -2,11 +2,9 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }}</h1>
-        <p class="subtitle">Buisness Illustration</p>
+        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         <p class="desc">
-          20 Creative scence Buisness illustrations. Ready to use for presentation. Website Mobile and all
-          needs.
+          {{ $route.query.description }}
         </p>
       </div>
       <div class="wrapper">
@@ -66,7 +64,7 @@ body {
 }
 
 .content {
-  padding: 0 0 0 56px;
+  padding: 0 0 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,18 +77,18 @@ body {
   letter-spacing: 0.05em;
 }
 
-.subtitle {
+/* .subtitle {
   padding: 6px 0 13px 0;
   font-size: 17px;
   line-height: 20px;
   letter-spacing: 0.08em;
 
   color: #3c3c3d;
-}
+} */
 
 .desc {
   padding: 0 40px 0 0;
-  font-size: 9px;
+  font-size: 14px;
   line-height: 190%;
   letter-spacing: 0.05em;
   color: #9f9faf;

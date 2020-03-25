@@ -4,7 +4,7 @@
       {{ $route.query.title }}
       <span class="selections">illustrations</span>
     </h1>
-    <p class="desc">A set of well crafted-tech illustrations for your web and app projects.</p>
+    <p class="desc">{{ $route.query.description }}</p>
     <div class="wrapper">
       <div
         class="preview"

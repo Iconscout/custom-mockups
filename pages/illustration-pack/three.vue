@@ -2,14 +2,14 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }}</h1>
-        <p class="desc">Create a unique illustration for a website, application, or presentation.</p>
-        <div class="btnGroup">
+        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <p class="desc">{{ $route.query.description }}</p>
+        <!-- <div class="btnGroup">
           <button class="btn">.AI</button>
           <button class="btn">.EPS</button>
           <button class="btn">.SVG</button>
           <button class="btn">.PNG</button>
-        </div>
+        </div> -->
       </div>
       <div
         class="heroImg"
@@ -100,7 +100,7 @@ body {
   color: #3c3c3d;
 }
 
-.btnGroup {
+/* .btnGroup {
   display: flex;
   flex-wrap: wrap;
   width: 206px;
@@ -113,7 +113,7 @@ body {
   border-radius: 4px;
   font-size: 14px;
   margin: 8px 8px 0 0;
-}
+} */
 
 .heroImg {
   width: 500px;
@@ -132,7 +132,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 51px;
+  margin-top: 120px;
 }
 
 .wrapper {
