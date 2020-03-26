@@ -2,14 +2,11 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <div class="titleWrapper">
+          <h1 class="title">{{ $route.query.title }}</h1>
+          <h2 class="subtitle">Illustrations</h2>
+        </div>
         <p class="desc">{{ $route.query.description }}</p>
-        <!-- <div class="btnGroup">
-          <button class="btn">.AI</button>
-          <button class="btn">.EPS</button>
-          <button class="btn">.SVG</button>
-          <button class="btn">.PNG</button>
-        </div> -->
       </div>
       <div
         class="heroImg"
@@ -38,6 +35,12 @@
               }"
       />
       <div
+        class="wrapper"
+        :style="{
+                backgroundImage: `url(${$route.query.url[4]})`,
+              }"
+      />
+       <div
         class="wrapper"
         :style="{
                 backgroundImage: `url(${$route.query.url[0]})`,
@@ -72,11 +75,11 @@ body {
   width: 720px;
   height: 480px;
   overflow: hidden;
+  position: relative;
 }
 
 .main {
   display: flex;
-  position: relative;
 }
 
 .content {
@@ -87,59 +90,62 @@ body {
 
 .title {
   font-weight: bold;
-  font-size: 46px;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  width: 215px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 36px;
   line-height: 110%;
   letter-spacing: 0.02em;
 }
 
 .desc {
   padding: 16px 0 40px 0;
+  line-height: 190%;
+  letter-spacing: 0.05em;
+  color: #9f9faf;
+  width: 215px;
   font-weight: normal;
-  line-height: 18px;
-  font-size: 14px;
-  color: #3c3c3d;
 }
-
-/* .btnGroup {
-  display: flex;
-  flex-wrap: wrap;
-  width: 206px;
-}
-
-.btn {
-  width: 48px;
-  height: 26px;
-  border: 1px solid #dedede;
-  border-radius: 4px;
-  font-size: 14px;
-  margin: 8px 8px 0 0;
-} */
 
 .heroImg {
-  width: 500px;
-  height: 251px;
-  margin: 40px 0 0 0;
+  width: 430px;
+  height: 322px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -20px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .imgGrid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 120px;
+  margin-top: 35px;
+  position: absolute;
+  left: -65px;
+  bottom: 40px;
 }
 
 .wrapper {
-  width: 150px;
-  height: 110px;
+  width: 140px;
+  height: 105px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin: 0 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 5px;
 }
 </style>

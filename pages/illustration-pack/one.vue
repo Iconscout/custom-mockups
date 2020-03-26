@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    <h1 class="title">
-      {{ $route.query.title }}
-      <span class="selections">illustrations</span>
-    </h1>
+    <div class="titleWrapper">
+      <h1 class="title">
+        {{ $route.query.title }}
+        <span class="selections">illustrations</span>
+      </h1>
+    </div>
     <p class="desc">{{ $route.query.description }}</p>
     <div class="wrapper">
       <div
@@ -13,7 +15,7 @@
               }"
       />
       <div
-        class="preview"
+        class="preview two"
         :style="{
                 backgroundImage: `url(${$route.query.url[1]})`,
               }"
@@ -50,16 +52,27 @@ body {
 .container {
   width: 720px;
   height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .title {
   text-align: center;
   margin: 0;
-  padding: 50px 0 25px 0;
+  padding: 59px 0 10px 0;
   font-weight: 600;
-  font-size: 44px;
-  line-height: 116.4%;
+  font-size: 36px;
+  line-height: 130%;
   letter-spacing: 0.04em;
+  white-space: nowrap;
+  width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .selections {
@@ -68,11 +81,10 @@ body {
 
 .desc {
   text-align: center;
-  padding: 0 150px;
+  padding: 0 150px 59px 150px;
   margin: 0;
   font-weight: normal;
   font-size: 22px;
-  line-height: 160%;
   letter-spacing: 0.08em;
   color: #596080;
 }
@@ -81,14 +93,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0 40px;
+  position: absolute;
+  left: -108px;
 }
 
 .preview {
-  width: 200px;
-  height: 200px;
+  width: 294px;
+  height: 220px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+
+.two {
+  margin: 0 27px;
 }
 </style>

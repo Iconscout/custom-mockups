@@ -2,8 +2,21 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <div class="titleWrapper">
+          <h1 class="title">{{ $route.query.title }}</h1>
+          <h2 class="subtitle">Illustrations</h2>
+        </div>
+        <p class="desc">{{ $route.query.description }}</p>
       </div>
+
+      <div class="pattern1">
+        <img src="@/assets/images/dots.png" />
+      </div>
+
+      <div class="pattern2">
+         <img src="@/assets/images/dots.png" />
+      </div>
+
       <div
         class="wrapper last"
         :style="{
@@ -78,9 +91,8 @@ body {
 .container {
   width: 720px;
   height: 480px;
-  background-image: url('~assets/images/background-black.png');
-  background-size: contain;
   overflow: hidden;
+  position: relative;
 }
 
 .main {
@@ -89,28 +101,59 @@ body {
   position: relative;
 }
 
+.pattern1 {
+  position: absolute;
+  top: 215px;
+  left: -15px;
+}
+
+.pattern2 {
+   position: absolute;
+   left: 201px;
+   top: -11px;
+}
+
 .content {
-  padding: 50px 0 50px 40px;
+  padding: 50px 0 0 50px;
   width: 50%;
 }
 
 .title {
-  font-size: 44px;
   font-weight: bold;
-  margin-top: 21px;
-  color: #fff;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  width: 215px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+}
+
+.desc {
+  padding: 15px 0 40px 0;
+  line-height: 190%;
+  letter-spacing: 0.05em;
+  color: #9f9faf;
+  width: 215px;
+  font-weight: normal;
 }
 
 .firstColumn {
-  margin-right: 30px;
+  margin-right: 20px;
   transform: rotate(5deg);
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 .secondColumn {
   transform: rotate(5deg);
   margin-top: -30px;
-  margin-right: -20px;
 }
 
 .last {
@@ -122,10 +165,12 @@ body {
 
 .wrapper {
   width: 200px;
-  height: 142px;
-  margin: 30px 0;
+  height: 150px;
+  margin: 20px 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 10px;
 }
 </style>

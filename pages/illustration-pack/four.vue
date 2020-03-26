@@ -2,8 +2,11 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
-        <p class="subtitle">{{ $route.query.description }}</p>
+        <div class="titleWrapper">
+          <h1 class="title">{{ $route.query.title }}</h1>
+          <h2 class="subtitle">Illustrations</h2>
+        </div>
+        <p class="desc">{{ $route.query.description }}</p>
       </div>
       <div class="firstColumn">
         <div
@@ -74,8 +77,10 @@ body {
   width: 720px;
   height: 480px;
   background-image: url('~assets/images/pattern-background.png');
-  background-size: contain;
+      background-size: 1000px;
+    background-position: -140px -70px;
   overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -85,47 +90,58 @@ body {
 }
 
 .content {
-  padding: 60px 0 60px 40px;
+  padding: 50px 0 0 50px;
   width: 50%;
 }
 
 .title {
-  margin-top: 30px;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 116.4%;
-  letter-spacing: 0.06em;
-  color: #7352ff;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  width: 215px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subtitle {
-  padding: 13px 0;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 135%;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+}
+
+.desc {
+  padding: 15px 0 40px 0;
+  line-height: 190%;
   letter-spacing: 0.05em;
-  color: #626466;
-  width: 183px;
+  color: #9f9faf;
+  width: 215px;
+  font-weight: normal;
 }
 
 .firstColumn {
-  margin-right: 10px;
-  margin-top: 15px;
-  transform: rotate(2.27deg);
+  margin-right: 15px;
+  margin-top: 20px;
+  transform: rotate(3deg);
 }
 
 .secondColumn {
   margin: -20px -10px 0 0;
-  transform: rotate(2.27deg);
+  transform: rotate(3deg);
 }
 
 .wrapper {
   width: 220px;
   height: 154px;
-  margin: 10px 0;
+  margin: 15px 0;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
 }
 </style>

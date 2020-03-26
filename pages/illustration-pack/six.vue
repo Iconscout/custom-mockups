@@ -2,23 +2,35 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+        <div class="titleWrapper">
+          <h1 class="title">{{ $route.query.title }}</h1>
+          <h2 class="subtitle">Illustrations</h2>
+        </div>
         <p class="desc">{{ $route.query.description }}</p>
-
-        <div class="pattern">
-          <img src="@/assets/images/red-dots.svg" height="80" />
-        </div>
-        <div class="pattern2">
-          <img src="@/assets/images/white-dots.svg" height="80" />
-        </div>
       </div>
-      <div class="bg"></div>
-      <div
-        class="preview"
-        :style="{
+      <div class="pattern">
+        <img src="@/assets/images/box-pattern.png" />
+      </div>
+      <div class="wrapper">
+        <div
+          class="preview1"
+          :style="{
                 backgroundImage: `url(${$route.query.url[0]})`,
               }"
-      />
+        />
+        <div
+          class="preview2"
+          :style="{
+                backgroundImage: `url(${$route.query.url[1]})`,
+              }"
+        />
+        <div
+          class="preview3"
+          :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -38,95 +50,110 @@ export default {
 </script>
 
 <style>
-*,
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 .container {
   width: 720px;
   height: 480px;
+  background: #fafcff;
   overflow: hidden;
-  position: relative;
-}
-
-.pattern {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 9;
-}
-
-.pattern2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9;
 }
 
 .main {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .content {
-  padding: 0 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 250px;
+  display: block;
+  padding: 60px 0 0 60px;
 }
 
-.name {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  color: #12135f;
-  margin-left: 10px;
+.pattern {
+  position: absolute;
+  top: 247px;
+  right: 479px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 41px;
+  font-weight: 600;
+  font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.08em;
-  color: #e45149;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
+  width: 215px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subtitle {
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.07em;
-  color: #e45149;
-  padding: 5px 0 15px 0;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
 }
 
 .desc {
-  font-size: 12px;
-  line-height: 21px;
-  color: #3c3c3d;
-  padding-bottom: 17px;
+  line-height: 190%;
+  letter-spacing: 0.05em;
+  color: #9f9faf;
+  width: 215px;
+  font-weight: normal;
 }
 
-.bg {
+.wrapper {
+  position: relative;
+}
+
+.preview1 {
+  width: 400px;
+  height: 300px;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 303px;
-  height: 284px;
-  background: #78bcff;
-}
-
-.preview {
-  width: 460px;
-  height: 400px;
-  margin: 30px 0;
+  top: 30px;
   z-index: 10;
+  right: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 15px;
+}
+
+.preview2 {
+  width: 266px;
+  height: 200px;
+  position: absolute;
+  top: 250px;
+  right: 305px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 15px;
+}
+
+.preview3 {
+  width: 200px;
+  height: 150px;
+  z-index: 15;
+  position: absolute;
+  top: 290px;
+  right: 40px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 15px;
 }
 </style>

@@ -2,10 +2,17 @@
   <div class="container">
     <div class="main">
       <div class="content">
-        <div class="text">
-          <h1 class="title">{{ $route.query.title }} Illustrations</h1>
-          <p class="desc">{{ $route.query.description }}</p>
+        <div class="titleWrapper">
+          <h1 class="title">{{ $route.query.title }}</h1>
+          <h2 class="subtitle">Illustrations</h2>
         </div>
+        <p class="desc">{{ $route.query.description }}</p>
+      </div>
+       <div class="pattern">
+        <img src="@/assets/images/box-pattern.png" />
+      </div>
+       <div class="pattern2">
+        <img src="@/assets/images/boxes.png" />
       </div>
       <div class="firstColumn">
         <div class="wrapper"  :style="{
@@ -68,9 +75,8 @@ body {
 .container {
   width: 720px;
   height: 480px;
-  background: #6ca0ff;
+  background: #FAFAFC;
   overflow: hidden;
-  color: white;
 }
 
 .main {
@@ -80,53 +86,68 @@ body {
 }
 
 .content {
-  padding: 50px 0 0 50px;
+  padding: 60px 0 0 60px;
   width: 324px;
+}
+
+.pattern {
+  position: absolute;
+  top: 247px;
+  right: 479px;
+}
+
+.pattern2 {
+  position: absolute;
+  top: 18px;
+  right: 286px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
   font-weight: 600;
-  font-size: 40px;
-  line-height: 46px;
-  padding-bottom: 10px;
-  font-family: 'Times New Roman', Times, serif;
-  width: 324px;
+  font-size: 36px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
+  width: 215px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subtitle {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: normal;
-  padding-bottom: 10px;
-  opacity: 0.8;
-  position: absolute;
-  width: 330px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
 }
 
 .desc {
-  font-size: 12px;
-  line-height: 21px;
-  color: #fff;
-  padding-bottom: 17px;
-}
-
-.text {
-  position: absolute;
+  line-height: 190%;
+  letter-spacing: 0.05em;
+  color: #9f9faf;
+  width: 215px;
+  font-weight: normal;
 }
 
 .firstColumn {
-  margin-right: 20px;
-  margin-top: 261px;
+  margin-right: 23px;
+  margin-top: 228px;
+  z-index: 10;
 }
 
 .secondColumn {
-  margin-right: 20px;
-  margin-top: -40px;
+  margin-right: 23px;
+  margin-top: -26px;
 }
 
 .thirdColumn {
   margin-top: 60px;
-  margin-right: -40px;
+  margin-right: -42px;
 }
 
 .last {
@@ -136,12 +157,14 @@ body {
 }
 
 .wrapper {
-  width: 161px;
-  height: 161px;
+  width: 160px;
+  height: 170px;
   margin: 20px 0;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+border-radius: 15px;
 }
 </style>
