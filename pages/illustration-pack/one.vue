@@ -37,7 +37,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap'
       }
     ]
   })
@@ -46,7 +46,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -65,10 +65,9 @@ body {
   text-align: center;
   margin: 0;
   padding: 59px 0 10px 0;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 36px;
   line-height: 130%;
-  letter-spacing: 0.04em;
   white-space: nowrap;
   width: 400px;
   overflow: hidden;
@@ -84,8 +83,7 @@ body {
   padding: 0 150px 59px 150px;
   margin: 0;
   font-weight: normal;
-  font-size: 22px;
-  letter-spacing: 0.08em;
+  font-size: 24px;
   color: #596080;
 }
 

@@ -42,7 +42,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Muli:400,800&display=swap'
       }
     ]
   })
@@ -51,7 +51,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 .container {
@@ -88,7 +88,6 @@ body {
   font-weight: 600;
   font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.05em;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -99,15 +98,14 @@ body {
   font-weight: 600;
   font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.05em;
 }
 
 .desc {
   line-height: 190%;
-  letter-spacing: 0.05em;
   color: #9f9faf;
   width: 215px;
   font-weight: normal;
+  font-size: 18px;
 }
 
 .wrapper {

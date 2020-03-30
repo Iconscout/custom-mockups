@@ -35,23 +35,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  head: () => ({
-    link: [
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
-      }
-    ]
-  })
-}
-</script>
-
 <style>
+@import "circular-std";
+
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: CircularStd;
 }
 
 .container {
@@ -85,10 +73,9 @@ body {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.05em;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -99,15 +86,14 @@ body {
   font-weight: 600;
   font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.05em;
 }
 
 .desc {
   line-height: 190%;
-  letter-spacing: 0.05em;
   color: #9f9faf;
   width: 215px;
   font-weight: normal;
+  font-size: 18px;
 }
 
 .wrapper {

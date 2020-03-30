@@ -122,7 +122,6 @@ body {
   font-weight: bold;
   font-size: 36px;
   line-height: 110%;
-  letter-spacing: 0.02em;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -133,13 +132,11 @@ body {
   font-weight: bold;
   font-size: 36px;
   line-height: 110%;
-  letter-spacing: 0.02em;
 }
 
 .desc {
   padding: 15px 0 40px 0;
   line-height: 190%;
-  letter-spacing: 0.05em;
   color: #9f9faf;
   width: 215px;
   font-weight: normal;

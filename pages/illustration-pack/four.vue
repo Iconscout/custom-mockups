@@ -59,7 +59,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap'
       }
     ]
   })
@@ -71,7 +71,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 .container {
   width: 720px;
@@ -98,7 +98,6 @@ body {
   font-weight: bold;
   font-size: 36px;
   line-height: 110%;
-  letter-spacing: 0.02em;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -109,16 +108,15 @@ body {
   font-weight: bold;
   font-size: 36px;
   line-height: 110%;
-  letter-spacing: 0.02em;
 }
 
 .desc {
   padding: 15px 0 40px 0;
   line-height: 190%;
-  letter-spacing: 0.05em;
   color: #9f9faf;
   width: 215px;
   font-weight: normal;
+  font-size: 18px;
 }
 
 .firstColumn {
