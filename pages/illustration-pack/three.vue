@@ -57,7 +57,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap'
       }
     ]
   })
@@ -69,7 +69,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 .container {
   width: 720px;

@@ -58,7 +58,14 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700&display=swap'
+      }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Hind&display=swap" rel='
       }
     ]
   })
@@ -70,7 +77,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Palanquin Dark', sans-serif;
 }
 .container {
   width: 720px;
@@ -132,6 +139,7 @@ body {
   color: #9f9faf;
   width: 215px;
   font-weight: normal;
+  font-family: 'Hind', sans-serif;
 }
 
 .firstColumn {
