@@ -57,7 +57,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap'
+          'https://fonts.googleapis.com/css?family=Playfair+Display:400,600&display=swap'
       },
       {
         rel: 'stylesheet',

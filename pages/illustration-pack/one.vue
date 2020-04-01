@@ -2,8 +2,7 @@
   <div class="container">
     <div class="titleWrapper">
       <h1 class="title">
-        {{ $route.query.title }}
-        <span class="selections">illustrations</span>
+        {{ $route.query.title }} illustrations
       </h1>
     </div>
     <p class="desc">{{ $route.query.description }}</p>

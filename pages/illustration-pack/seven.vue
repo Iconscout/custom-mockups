@@ -59,15 +59,13 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500&display=swap'
-      }
-    ],
-    link: [
+      },
       {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Hind:300,400&display=swap'
       }
-    ]
+    ],
   })
 }
 </script>
