@@ -59,16 +59,14 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap&subset=latin-ext'
-      }
-    ],
-    link: [
-      {
+          'https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap'
+      },
+       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
+          'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto&display=swap'
       }
-    ]
+    ],
   })
 }
 </script>
@@ -102,9 +100,9 @@ body {
 }
 
 .title {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 130%;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -112,19 +110,19 @@ body {
 }
 
 .subtitle {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 130%;
 }
 
 .desc {
   padding: 15px 0 40px 0;
-  line-height: 190%;
+  line-height: 130%;
   color: #9f9faf;
   width: 215px;
-  font-weight: normal;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  font-family: 'Open Sans';
 }
 
 .firstColumn {

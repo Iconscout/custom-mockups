@@ -38,7 +38,12 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap'
-      }
+      },
+       {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      },
     ]
   })
 }
@@ -46,7 +51,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand';
 }
 
 .container {
@@ -83,8 +88,10 @@ body {
   padding: 0 150px 59px 150px;
   margin: 0;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 21px;
+  line-height: 130%;
   color: #596080;
+  font-family: 'Roboto';
 }
 
 .wrapper {

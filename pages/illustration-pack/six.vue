@@ -51,13 +51,12 @@ export default {
 
 <style>
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Muli';
 }
 
 .container {
   width: 720px;
   height: 480px;
-  background: #fafcff;
   overflow: hidden;
 }
 
@@ -85,9 +84,9 @@ body {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 130%;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -95,17 +94,18 @@ body {
 }
 
 .subtitle {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 130%;
 }
 
 .desc {
-  line-height: 190%;
+  line-height: 130%;
   color: #9f9faf;
   width: 215px;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 21px;
+  margin-top: 15px;
 }
 
 .wrapper {

@@ -58,7 +58,12 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap'
-      }
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      },
     ]
   })
 }
@@ -69,7 +74,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display';
 }
 .container {
   width: 720px;
@@ -91,7 +96,7 @@ body {
 .title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 130%;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -101,15 +106,17 @@ body {
 .subtitle {
   font-weight: bold;
   font-size: 36px;
-  line-height: 110%;
+  line-height: 130%;
 }
 
 .desc {
   padding: 16px 0 40px 0;
-  line-height: 190%;
+  line-height: 130%;
   color: #9f9faf;
   width: 215px;
-  font-weight: normal;
+  font-weight: 300;
+  font-size: 21px;
+  font-family: 'Roboto';
 }
 
 .heroImg {

@@ -35,6 +35,20 @@
   </div>
 </template>
 
+<script>
+export default {
+  head: () => ({
+    link: [
+       {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      },
+    ]
+  })
+}
+</script>
+
 <style>
 @import "circular-std";
 
@@ -45,7 +59,6 @@ body {
 .container {
   width: 720px;
   height: 480px;
-  background: #fafcff;
   overflow: hidden;
 }
 
@@ -73,9 +86,9 @@ body {
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 900;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 130%;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -85,15 +98,17 @@ body {
 .subtitle {
   font-weight: 600;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 130%;
 }
 
 .desc {
-  line-height: 190%;
+  line-height: 130%;
   color: #9f9faf;
   width: 215px;
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 21px;
+  font-family: 'Roboto';
+  margin-top: 15px;
 }
 
 .wrapper {

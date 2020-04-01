@@ -58,14 +58,14 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700&display=swap'
+          'https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500&display=swap'
       }
     ],
     link: [
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Hind&display=swap" rel='
+          'https://fonts.googleapis.com/css?family=Hind:300,400&display=swap'
       }
     ]
   })
@@ -77,7 +77,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Palanquin Dark', sans-serif;
+  font-family: 'Palanquin Dark';
 }
 .container {
   width: 720px;
@@ -116,9 +116,9 @@ body {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 36px;
-  line-height: 52px;
+  line-height: 130%;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -126,19 +126,19 @@ body {
 }
 
 .subtitle {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 36px;
-  line-height: 52px;
-  letter-spacing: 0.05em;
+  line-height: 130%;
 }
 
 .desc {
-  line-height: 190%;
-  letter-spacing: 0.05em;
+  line-height: 130%;
   color: #9f9faf;
   width: 215px;
-  font-weight: normal;
-  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  font-family: 'Hind';
+  margin-top: 15px;
 }
 
 .firstColumn {
