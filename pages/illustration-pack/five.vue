@@ -81,7 +81,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
       }
     ]
   })
@@ -147,7 +147,7 @@ body {
   color: #9f9faf;
   width: 215px;
   font-weight: normal;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .firstColumn {

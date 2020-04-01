@@ -119,7 +119,6 @@ body {
   font-weight: 600;
   font-size: 36px;
   line-height: 52px;
-  letter-spacing: 0.05em;
   width: 215px;
   overflow: hidden;
   text-overflow: ellipsis;

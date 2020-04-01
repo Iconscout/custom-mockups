@@ -59,14 +59,14 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap'
+          'https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap&subset=latin-ext'
       }
     ],
     link: [
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'
+          'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
       }
     ]
   })
@@ -78,7 +78,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Berkshire Swash';
 }
 .container {
   width: 720px;
@@ -124,7 +124,7 @@ body {
   width: 215px;
   font-weight: normal;
   font-size: 18px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .firstColumn {
