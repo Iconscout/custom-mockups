@@ -44,10 +44,10 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap'
       },
-      {
+       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Lato&display=swap'
+          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       },
     ]
   })
@@ -111,7 +111,7 @@ body {
   font-weight: 300;
   font-size: 21px;
   margin-top: 15px;
-  font-family: 'Lato';
+  font-family: 'Roboto';
 }
 
 .wrapper {
