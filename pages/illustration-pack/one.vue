@@ -36,12 +36,12 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap'
+          'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap'
       },
        {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          'https://fonts.googleapis.com/css?family=Lato&display=swap'
       },
     ]
   })
@@ -50,7 +50,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Quicksand';
+  font-family: 'Nanum Gothic';
 }
 
 .container {
@@ -90,7 +90,7 @@ body {
   font-size: 21px;
   line-height: 130%;
   color: #596080;
-  font-family: 'Roboto';
+  font-family: 'Lato';
 }
 
 .wrapper {

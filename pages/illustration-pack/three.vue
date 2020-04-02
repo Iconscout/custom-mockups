@@ -57,12 +57,12 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Playfair+Display:400,600&display=swap'
+          'https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap'
       },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          'https://fonts.googleapis.com/css?family=Oswald:300,400&display=swap'
       },
     ]
   })
@@ -74,7 +74,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display';
+  font-family: 'EB Garamond';
 }
 .container {
   width: 720px;
@@ -116,7 +116,7 @@ body {
   width: 215px;
   font-weight: 300;
   font-size: 21px;
-  font-family: 'Roboto';
+  font-family: 'Oswald';
 }
 
 .heroImg {
