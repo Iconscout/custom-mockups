@@ -79,7 +79,6 @@ body {
 .container {
   width: 720px;
   height: 480px;
-  background: #FAFAFC;
   overflow: hidden;
 }
 
