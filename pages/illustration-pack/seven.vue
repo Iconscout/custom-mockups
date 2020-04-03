@@ -3,8 +3,7 @@
     <div class="main">
       <div class="content">
         <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }}</h1>
-          <h2 class="subtitle">Illustrations</h2>
+          <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         </div>
         <p class="desc">{{ $route.query.description }}</p>
       </div>
@@ -27,6 +26,17 @@
       </div>
       <div class="secondColumn">
         <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[2]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[4]})`,
+              }" />
+        <div class="wrapper"  :style="{
+                backgroundImage: `url(${$route.query.url[3]})`,
+              }" />
+      </div>
+      <div class="thirdColumn">
+        <div class="wrapper"  :style="{
                 backgroundImage: `url(${$route.query.url[3]})`,
               }" />
         <div class="wrapper"  :style="{
@@ -34,17 +44,6 @@
               }" />
         <div class="wrapper"  :style="{
                 backgroundImage: `url(${$route.query.url[1]})`,
-              }" />
-      </div>
-      <div class="thirdColumn">
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
               }" />
       </div>
     </div>
@@ -118,15 +117,6 @@ body {
   font-size: 36px;
   line-height: 130%;
   width: 215px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.subtitle {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 130%;
 }
 
 .desc {
@@ -166,9 +156,10 @@ body {
   height: 170px;
   margin: 20px 0;
   border-radius: 10px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: white;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
 border-radius: 15px;
 }

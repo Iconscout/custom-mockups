@@ -3,8 +3,7 @@
     <div class="main">
       <div class="content">
         <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }}</h1>
-          <h2 class="subtitle">Illustrations</h2>
+          <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         </div>
         <p class="desc">{{ $route.query.description }}</p>
       </div>
@@ -128,15 +127,6 @@ body {
   font-size: 36px;
   line-height: 130%;
   width: 215px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.subtitle {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 130%;
 }
 
 .desc {
@@ -171,9 +161,10 @@ body {
   width: 200px;
   height: 150px;
   margin: 20px 0;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: white;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
 border-radius: 10px;
 }
