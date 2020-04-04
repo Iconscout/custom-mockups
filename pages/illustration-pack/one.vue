@@ -5,7 +5,7 @@
         {{ $route.query.title }} Illustrations
       </h1>
     </div>
-    <p class="desc">{{ $route.query.description }}</p>
+    <p class="total">{{ $route.query.total_items }} Illustrations</p>
     <div class="wrapper">
       <div
         class="preview"
@@ -79,7 +79,7 @@ body {
   background: linear-gradient(to top, #afdaf2 50%, transparent 50%);
 }
 
-.desc {
+.total {
   text-align: center;
   padding: 0 150px 59px 150px;
   margin: 0;
