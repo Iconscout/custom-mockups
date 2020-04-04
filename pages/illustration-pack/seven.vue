@@ -5,7 +5,7 @@
         <div class="titleWrapper">
           <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         </div>
-        <p class="desc">{{ $route.query.description }}</p>
+        <p class="total">{{ $route.query.total_items }} Illustrations</p>
       </div>
        <div class="pattern">
         <img src="@/assets/images/box-pattern.png" />
@@ -118,7 +118,7 @@ body {
   width: 215px;
 }
 
-.desc {
+.total {
   line-height: 130%;
   color: #9f9faf;
   width: 215px;

@@ -5,7 +5,7 @@
         <div class="titleWrapper">
           <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         </div>
-        <p class="desc">{{ $route.query.description }}</p>
+        <p class="total">{{ $route.query.total_items }} Illustrations</p>
       </div>
       <div class="firstColumn">
         <div
@@ -106,7 +106,7 @@ body {
 }
 
 
-.desc {
+.total {
   padding: 15px 0 40px 0;
   line-height: 130%;
   color: #9f9faf;
