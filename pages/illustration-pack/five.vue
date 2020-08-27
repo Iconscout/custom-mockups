@@ -13,53 +13,53 @@
       </div>
 
       <div class="pattern2">
-         <img src="@/assets/images/dots.png" />
+        <img src="@/assets/images/dots.png" />
       </div>
 
       <div
         class="wrapper last"
         :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[0]})`
+        }"
       />
       <div class="firstColumn">
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[3]})`
+          }"
         />
       </div>
       <div class="secondColumn">
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[3]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
         />
       </div>
     </div>
@@ -75,12 +75,12 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Volkhov:400,700&display=swap'
       },
-       {
+      {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto&display=swap'
       }
-    ],
+    ]
   })
 }
 </script>
@@ -112,9 +112,9 @@ body {
 }
 
 .pattern2 {
-   position: absolute;
-   left: 201px;
-   top: -11px;
+  position: absolute;
+  left: 201px;
+  top: -11px;
 }
 
 .content {
@@ -165,7 +165,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 10px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
 }
 </style>
