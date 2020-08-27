@@ -14,20 +14,20 @@
         <div
           class="preview1"
           :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
         />
         <div
           class="preview2"
           :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
         />
         <div
           class="preview3"
           :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
         />
       </div>
     </div>
@@ -38,16 +38,15 @@
 export default {
   head: () => ({
     link: [
+      // {
+      //   rel: 'stylesheet',
+      //   href:
+      //     'https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap'
+      // },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap'
-      },
-       {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
-      },
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
     ]
   })
 }
@@ -119,8 +118,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
 
 .preview2 {
@@ -134,8 +134,9 @@ border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
 
 .preview3 {
@@ -150,7 +151,8 @@ border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
 </style>
