@@ -40,6 +40,11 @@ export default {
     link: [
       {
         rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap'
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       }
     ]
@@ -48,10 +53,8 @@ export default {
 </script>
 
 <style>
-@import 'circular-std';
-
 body {
-  font-family: CircularStd;
+  font-family: 'Roboto Slab';
 }
 
 .container {
