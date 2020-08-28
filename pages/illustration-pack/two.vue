@@ -14,20 +14,20 @@
         <div
           class="preview1"
           :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
         />
         <div
           class="preview2"
           :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
         />
         <div
           class="preview3"
           :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
         />
       </div>
     </div>
@@ -38,21 +38,23 @@
 export default {
   head: () => ({
     link: [
-       {
+      {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap'
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
     ]
   })
 }
 </script>
 
 <style>
-@import "circular-std";
-
 body {
-  font-family: CircularStd;
+  font-family: 'Roboto Slab';
 }
 
 .container {

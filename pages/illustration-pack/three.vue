@@ -5,45 +5,45 @@
         <div class="titleWrapper">
           <h1 class="title">{{ $route.query.title }} Illustrations</h1>
         </div>
-        <p class="total">{{ $route.query.total_items}} Illustrations</p>
+        <p class="total">{{ $route.query.total_items }} Illustrations</p>
       </div>
       <div
         class="heroImg"
         :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[0]})`
+        }"
       />
     </div>
     <div class="imgGrid">
       <div
         class="wrapper"
         :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[1]})`
+        }"
       />
       <div
         class="wrapper"
         :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[2]})`
+        }"
       />
       <div
         class="wrapper"
         :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[3]})`
+        }"
       />
       <div
         class="wrapper"
         :style="{
-                backgroundImage: `url(${$route.query.url[4]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[4]})`
+        }"
       />
-       <div
+      <div
         class="wrapper"
         :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[0]})`
+        }"
       />
     </div>
   </div>
@@ -58,11 +58,10 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap'
       },
-       {
+      {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Lato&display=swap'
-      },
+        href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'
+      }
     ]
   })
 }
@@ -73,7 +72,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-   font-family: 'Nanum Gothic';
+  font-family: 'Nanum Gothic';
 }
 .container {
   width: 720px;
@@ -121,7 +120,8 @@ body {
   background-color: white;
   overflow: hidden;
   border-bottom-left-radius: 5px;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .imgGrid {
@@ -141,7 +141,8 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   margin: 0 15px;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 5px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
 }
 </style>

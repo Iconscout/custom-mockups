@@ -1,29 +1,27 @@
 <template>
   <div class="container">
     <div class="titleWrapper">
-      <h1 class="title">
-        {{ $route.query.title }} Illustrations
-      </h1>
+      <h1 class="title">{{ $route.query.title }} Illustrations</h1>
     </div>
     <p class="total">{{ $route.query.total_items }} Illustrations</p>
     <div class="wrapper">
       <div
         class="preview"
         :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[0]})`
+        }"
       />
       <div
         class="preview two"
         :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[1]})`
+        }"
       />
       <div
         class="preview"
         :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+          backgroundImage: `url(${$route.query.url[2]})`
+        }"
       />
     </div>
   </div>
@@ -38,11 +36,10 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap'
       },
-       {
+      {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Lato&display=swap'
-      },
+        href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'
+      }
     ]
   })
 }

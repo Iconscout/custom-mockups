@@ -11,40 +11,40 @@
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
         />
       </div>
       <div class="secondColumn">
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[3]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[4]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[4]})`
+          }"
         />
         <div
           class="wrapper"
           :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }"
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
         />
       </div>
     </div>
@@ -60,12 +60,12 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap'
       },
-       {
+      {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto&display=swap'
       }
-    ],
+    ]
   })
 }
 </script>
@@ -81,8 +81,8 @@ body {
   width: 720px;
   height: 480px;
   background-image: url('~assets/images/pattern-background.png');
-      background-size: 1000px;
-    background-position: -140px -70px;
+  background-size: 1000px;
+  background-position: -140px -70px;
   overflow: hidden;
   background-repeat: no-repeat;
 }
@@ -104,7 +104,6 @@ body {
   line-height: 130%;
   width: 215px;
 }
-
 
 .total {
   padding: 15px 0 40px 0;
