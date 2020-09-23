@@ -7,44 +7,71 @@
         </div>
         <p class="total">{{ $route.query.total_items }} Illustrations</p>
       </div>
-       <div class="pattern">
+      <div class="pattern">
         <img src="@/assets/images/box-pattern.png" />
       </div>
-       <div class="pattern2">
+      <div class="pattern2">
         <img src="@/assets/images/boxes.png" />
       </div>
       <div class="firstColumn">
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[0]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }" />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[2]})`
+          }"
+        />
       </div>
       <div class="secondColumn">
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[4]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }" />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[3]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[4]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[5]})`
+          }"
+        />
       </div>
       <div class="thirdColumn">
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[3]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[2]})`,
-              }" />
-        <div class="wrapper"  :style="{
-                backgroundImage: `url(${$route.query.url[1]})`,
-              }" />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[6]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[0]})`
+          }"
+        />
+        <div
+          class="wrapper"
+          :style="{
+            backgroundImage: `url(${$route.query.url[1]})`
+          }"
+        />
       </div>
     </div>
   </div>
@@ -61,10 +88,9 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Hind:300,400&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       }
-    ],
+    ]
   })
 }
 </script>
@@ -124,7 +150,7 @@ body {
   width: 215px;
   font-weight: 300;
   font-size: 21px;
-  font-family: 'Hind';
+  font-family: 'Roboto';
   margin-top: 15px;
 }
 
@@ -159,7 +185,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02), 0px 1px 4px rgba(0, 0, 0, 0.03);
-border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
+    0px 1px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <img src="https://iconscout.com/assets/images/iconscout-logo.color.svg" />
       <h1 class="title">
-        iconscout-mockups
+        Iconscout Illustrations Mockups
       </h1>
       <h2 class="subtitle">
-        My astonishing Nuxt.js project
+        Get high-quality Icons, Illustrations, and Stock photos at one place
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
@@ -24,16 +24,6 @@
   </div>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
 <style>
 .container {
   margin: 0 auto;
@@ -45,18 +35,18 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-weight: 700;
+  font-size: 70px;
   color: #35495e;
   letter-spacing: 1px;
+  margin: 10px 0;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
+  font-weight: 400;
+  font-size: 24px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;

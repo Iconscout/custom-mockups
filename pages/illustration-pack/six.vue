@@ -38,11 +38,10 @@
 export default {
   head: () => ({
     link: [
-      // {
-      //   rel: 'stylesheet',
-      //   href:
-      //     'https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap'
-      // },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Alatsi&display=swap'
+      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
@@ -54,7 +53,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Rubik';
+  font-family: 'Alatsi';
 }
 
 .container {
@@ -87,7 +86,6 @@ body {
 }
 
 .title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 130%;
   width: 215px;

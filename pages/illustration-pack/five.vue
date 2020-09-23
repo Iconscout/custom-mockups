@@ -46,19 +46,19 @@
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[3]})`
+            backgroundImage: `url(${$route.query.url[4]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[2]})`
+            backgroundImage: `url(${$route.query.url[5]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[1]})`
+            backgroundImage: `url(${$route.query.url[6]})`
           }"
         />
       </div>
@@ -73,12 +73,11 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Volkhov:400,700&display=swap'
+          'https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       }
     ]
   })
@@ -90,7 +89,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Volkhov';
+  font-family: 'Lato';
 }
 .container {
   width: 720px;
@@ -135,7 +134,7 @@ body {
   color: #9f9faf;
   width: 215px;
   font-weight: 300;
-  font-family: 'Open Sans';
+  font-family: 'Roboto';
   font-size: 21px;
 }
 

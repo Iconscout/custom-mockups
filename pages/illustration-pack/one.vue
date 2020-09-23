@@ -34,11 +34,11 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap'
+          'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       }
     ]
   })
@@ -47,7 +47,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Nanum Gothic';
+  font-family: 'Source Sans Pro';
 }
 
 .container {
@@ -84,7 +84,7 @@ body {
   font-size: 21px;
   line-height: 130%;
   color: #596080;
-  font-family: 'Lato';
+  font-family: 'Roboto';
 }
 
 .wrapper {

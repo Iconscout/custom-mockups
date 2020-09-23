@@ -42,7 +42,7 @@
       <div
         class="wrapper"
         :style="{
-          backgroundImage: `url(${$route.query.url[0]})`
+          backgroundImage: `url(${$route.query.url[5]})`
         }"
       />
     </div>
@@ -60,7 +60,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
       }
     ]
   })
@@ -105,7 +105,7 @@ body {
   width: 215px;
   font-weight: 300;
   font-size: 21px;
-  font-family: 'Lato';
+  font-family: 'Roboto';
 }
 
 .heroImg {
