@@ -19,26 +19,26 @@
       <div
         class="wrapper last"
         :style="{
-          backgroundImage: `url(${$route.query.url[0]})`
+          backgroundImage: `url(${urls[0]})`
         }"
       />
       <div class="firstColumn">
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[1]})`
+            backgroundImage: `url(${urls[1]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[2]})`
+            backgroundImage: `url(${urls[2]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[3]})`
+            backgroundImage: `url(${urls[3]})`
           }"
         />
       </div>
@@ -46,19 +46,19 @@
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[4]})`
+            backgroundImage: `url(${urls[4]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[5]})`
+            backgroundImage: `url(${urls[5]})`
           }"
         />
         <div
           class="wrapper"
           :style="{
-            backgroundImage: `url(${$route.query.url[6]})`
+            backgroundImage: `url(${urls[6]})`
           }"
         />
       </div>
@@ -67,7 +67,17 @@
 </template>
 
 <script>
+import UrlsMixin from '@/components/mixins/urls'
+
 export default {
+  mixins: [UrlsMixin],
+
+  data() {
+    return {
+      maxMockups: 7
+    }
+  },
+
   head: () => ({
     link: [
       {

@@ -14,19 +14,19 @@
         <div
           class="preview1"
           :style="{
-            backgroundImage: `url(${$route.query.url[0]})`
+            backgroundImage: `url(${urls[0]})`
           }"
         />
         <div
           class="preview2"
           :style="{
-            backgroundImage: `url(${$route.query.url[1]})`
+            backgroundImage: `url(${urls[1]})`
           }"
         />
         <div
           class="preview3"
           :style="{
-            backgroundImage: `url(${$route.query.url[2]})`
+            backgroundImage: `url(${urls[2]})`
           }"
         />
       </div>
@@ -35,7 +35,17 @@
 </template>
 
 <script>
+import UrlsMixin from '@/components/mixins/urls'
+
 export default {
+  mixins: [UrlsMixin],
+
+  data() {
+    return {
+      maxMockups: 3
+    }
+  },
+
   head: () => ({
     link: [
       {
