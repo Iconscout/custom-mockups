@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       assets: [
-        { value: 'illustration', text: 'Illustration' },
+        { value: 'illustration', text: 'Illustrations' },
         { value: '3d', text: '3D illutration' }
       ]
     }
