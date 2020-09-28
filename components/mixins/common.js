@@ -1,4 +1,15 @@
+import findIndex from 'lodash/findIndex'
+
 export default {
+  data() {
+    return {
+      assets: [
+        { value: 'illustration', text: 'Illustration' },
+        { value: '3d', text: '3D illutration' }
+      ]
+    }
+  },
+
   computed: {
     urls() {
       const queryUlrs = this.$route.query.url
@@ -15,6 +26,14 @@ export default {
         urls.push(queryUlrs[j])
       }
       return urls
+    },
+
+    asset() {
+      const index = findIndex(this.assets, {
+        value: this.$route.query.asset
+      })
+
+      return this.assets[index > -1 ? index : 0]
     }
   }
 }

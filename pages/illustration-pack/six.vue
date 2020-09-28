@@ -3,9 +3,9 @@
     <div class="main">
       <div class="content">
         <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }} Illustrations</h1>
+          <h1 class="title">{{ $route.query.title }} {{ asset.text }}</h1>
         </div>
-        <p class="total">{{ $route.query.total_items }} Illustrations</p>
+        <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
       </div>
       <div class="pattern">
         <img src="@/assets/images/box-pattern.png" />
@@ -35,10 +35,10 @@
 </template>
 
 <script>
-import UrlsMixin from '@/components/mixins/urls'
+import CommonMixin from '@/components/mixins/common'
 
 export default {
-  mixins: [UrlsMixin],
+  mixins: [CommonMixin],
 
   data() {
     return {
