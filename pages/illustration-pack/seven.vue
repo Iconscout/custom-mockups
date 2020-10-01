@@ -94,7 +94,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Palanquin+Dark:400,500&display=swap'
+          'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -110,7 +110,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Palanquin Dark';
+  font-family: 'Noto Sans SC';
 }
 .container {
   width: 720px;
