@@ -28,30 +28,22 @@
 </template>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .container {
-  width: 360px;
-  height: 240px;
+  width: 720px;
+  height: 480px;
   background: #ffffff;
   display: inline-flex;
   flex-wrap: wrap;
-  padding: 12px 15px;
+  padding: 24px 30px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .image {
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  margin: 14px 15px;
+  width: 160px;
+  height: 160px;
+  max-width: 160px;
+  max-height: 160px;
+  margin: 28px 30px;
 }
 </style>
