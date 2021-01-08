@@ -5,7 +5,7 @@ export default {
     return {
       assets: [
         { value: 'illustration', text: 'Illustrations' },
-        { value: '3d', text: '3D illutrations' },
+        { value: '3d', text: '3D illustration' },
         { value: 'icon', text: 'Icons' }
       ]
     }
