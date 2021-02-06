@@ -5,7 +5,7 @@ export default {
     return {
       assets: [
         { value: 'illustration', text: 'Illustrations' },
-        { value: '3d', text: '3D illustrations' },
+        { value: '3d', text: '3D Illustrations' },
         { value: 'icon', text: 'Icons' }
       ]
     }
@@ -13,18 +13,18 @@ export default {
 
   computed: {
     urls() {
-      const queryUlrs = this.$route.query.url
+      const queryUrls = this.$route.query.url
 
-      const divisor = ~~(this.maxMockups / queryUlrs.length)
-      const remainder = this.maxMockups % queryUlrs.length
+      const divisor = ~~(this.maxMockups / queryUrls.length)
+      const remainder = this.maxMockups % queryUrls.length
 
       let urls = []
       for (let i = 0; i < divisor; i++) {
-        urls = [...urls, ...queryUlrs]
+        urls = [...urls, ...queryUrls]
       }
 
       for (let j = 0; j < remainder; j++) {
-        urls.push(queryUlrs[j])
+        urls.push(queryUrls[j])
       }
       return urls
     },
