@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Rubik";
-    src: local("Rubik"),
-     url(~assets/fonts/Rubik-Bold.ttf) format("truetype");
-}
+    font-family: "Averta";
+    src: local("Averta"), url(../assets/fonts/Averta-Regular.ttf) format("truetype");
+  }
+  
