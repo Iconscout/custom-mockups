@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="watremark">
+    <div class="watermark">
       <img src="@/assets/watermark/logo.svg" width="300" />
       <div class="username">@{{ params.username }}</div>
     </div>
@@ -23,7 +23,7 @@ export default {
   height: 129px;
 }
 
-.watremark {
+.watermark {
   position: relative;
   display: flex;
   justify-content: center;
