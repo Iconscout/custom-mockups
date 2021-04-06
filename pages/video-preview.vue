@@ -2,7 +2,7 @@
   <div class="box">
     <div class="watermark">
       <img src="@/assets/watermark/logo.svg" width="300" />
-      <div class="username">@{{ params.username }}</div>
+      <div class="username">{{ params.username }}</div>
     </div>
   </div>
 </template>
