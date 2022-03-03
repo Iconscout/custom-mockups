@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^1.5.5",
     "lodash": "^4.17.20",
     "nuxt": "^2.0.0"
   },

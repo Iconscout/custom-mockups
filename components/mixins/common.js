@@ -6,14 +6,19 @@ export default {
       assets: [
         { value: 'illustration', text: 'Illustrations' },
         { value: '3d', text: '3D Illustrations' },
-        { value: 'icon', text: 'Icons' }
+        { value: 'icon', text: 'Icons' },
+        { value: 'lottie', text: 'Lottie Animations' }
       ]
     }
   },
 
   computed: {
     urls() {
-      const queryUrls = this.$route.query.url
+      let queryUrls = this.$route.query.url
+
+      if (!Array.isArray(queryUrls)) {
+        queryUrls = Array(queryUrls)
+      }
 
       const divisor = ~~(this.maxMockups / queryUrls.length)
       const remainder = this.maxMockups % queryUrls.length
