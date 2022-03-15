@@ -6,13 +6,13 @@
     <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
     <div v-if="urls.length" class="wrapper">
       <div class="preview">
-        <lottie :key="0" :url="urls[0]" :height="220" :width="294" loop />
+        <lottie :key="0" :url="urls[0]" :height="220" :width="294" speed="0" />
       </div>
       <div class="preview two">
-        <lottie :key="1" :url="urls[1]" :height="220" :width="294" loop />
+        <lottie :key="1" :url="urls[1]" :height="220" :width="294" speed="0" />
       </div>
       <div class="preview">
-        <lottie :key="2" :url="urls[2]" :height="220" :width="294" loop />
+        <lottie :key="2" :url="urls[2]" :height="220" :width="294" speed="0" />
       </div>
     </div>
   </div>

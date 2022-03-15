@@ -25,13 +25,13 @@
     </div>
     <div class="previewWrapper">
       <div class="preview one">
-        <lottie :key="0" :url="urls[0]" :height="314" :width="240" loop />
+        <lottie :key="0" :url="urls[0]" :height="314" :width="240" speed="0" />
       </div>
       <div class="preview two">
-        <lottie :key="1" :url="urls[1]" :height="314" :width="240" loop />
+        <lottie :key="1" :url="urls[1]" :height="314" :width="240" speed="0" />
       </div>
       <div class="preview three">
-        <lottie :key="2" :url="urls[2]" :height="314" :width="240" loop />
+        <lottie :key="2" :url="urls[2]" :height="314" :width="240" speed="0" />
       </div>
     </div>
   </div>

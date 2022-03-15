@@ -25,11 +25,11 @@
     </div>
     <div v-if="urls.length" class="wrapper">
       <div class="preview">
-        <lottie :key="0" :url="urls[0]" :height="600" :width="720" loop />
+        <lottie :key="0" :url="urls[0]" :height="600" :width="720" speed="0" />
       </div>
     </div>
     <div class="backgroundImage position-absolute">
-      <lottie :key="0" :url="urls[0]" :height="300" :width="360" loop />
+      <lottie :key="0" :url="urls[0]" :height="300" :width="360" speed="0" />
     </div>
   </div>
 </template>
