@@ -9,7 +9,14 @@
     </div>
     <div class="imageWrapper">
       <div class="preview one">
-        <lottie :key="0" :url="urls[0]" :height="400" :width="340" speed="0" />
+        <lottie
+          :key="0"
+          :url="urls[0]"
+          :height="400"
+          :width="340"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="previewWrapeer">
         <div class="preview two">
@@ -18,7 +25,8 @@
             :url="urls[1]"
             :height="320"
             :width="240"
-            speed="0"
+            :loop="$route.query.loop === 'true'"
+            :speed="$route.query.loop === 'true' ? 1 : 0"
           />
         </div>
         <div class="preview three">
@@ -27,7 +35,8 @@
             :url="urls[2]"
             :height="320"
             :width="240"
-            speed="0"
+            :loop="$route.query.loop === 'true'"
+            :speed="$route.query.loop === 'true' ? 1 : 0"
           />
         </div>
       </div>

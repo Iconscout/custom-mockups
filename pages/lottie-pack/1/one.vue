@@ -11,7 +11,14 @@
     </div>
     <div v-if="urls.length" class="wrapper">
       <div class="preview">
-        <lottie :key="0" :url="urls[0]" :height="600" :width="720" speed="0" />
+        <lottie
+          :key="0"
+          :url="urls[0]"
+          :height="600"
+          :width="720"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
     </div>
   </div>

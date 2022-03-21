@@ -23,22 +23,64 @@
     </div>
     <div class="previewWrapper">
       <div class="preview">
-        <lottie :key="0" :url="urls[0]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="0"
+          :url="urls[0]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="preview">
-        <lottie :key="1" :url="urls[1]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="1"
+          :url="urls[1]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="preview">
-        <lottie :key="2" :url="urls[2]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="2"
+          :url="urls[2]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="preview">
-        <lottie :key="3" :url="urls[3]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="3"
+          :url="urls[3]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="preview">
-        <lottie :key="4" :url="urls[4]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="4"
+          :url="urls[4]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
       <div class="preview">
-        <lottie :key="5" :url="urls[5]" :height="200" :width="200" speed="0" />
+        <lottie
+          :key="5"
+          :url="urls[5]"
+          :height="200"
+          :width="200"
+          :loop="$route.query.loop === 'true'"
+          :speed="$route.query.loop === 'true' ? 1 : 0"
+        />
       </div>
     </div>
   </div>
