@@ -109,32 +109,41 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Source Sans Pro';
+}
+
 .container {
   overflow: hidden;
   width: 720px;
   height: 480px;
   position: relative;
 }
+
 .titleWrapper {
   display: flex;
   justify-content: center;
   align-items: baseline;
   margin: 21px auto;
 }
+
 .title {
   margin-right: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+
 .totalNumber {
   white-space: nowrap;
 }
+
 .previewWrapper {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
 }
+
 .preview {
   height: 200px;
   width: 200px;

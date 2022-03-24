@@ -3,7 +3,6 @@
     <div class="titleWrapper">
       <div class="totalNumber">
         <div class="number">{{ $route.query.total_items }}</div>
-        {{ asset.text }}
       </div>
       <h1 class="title">
         {{ $route.query.title }}
@@ -121,6 +120,10 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Source Sans Pro';
+}
+
 .container {
   overflow: hidden;
   width: 720px;
@@ -129,23 +132,28 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .titleWrapper {
   width: 320px;
   word-wrap: break-word;
   text-align: center;
 }
+
 .totalNumber {
   margin-bottom: 20px;
 }
+
 .number {
   font-size: 5rem;
   font-weight: bold;
 }
+
 .formatBadgesWrapper {
   display: flex;
   width: 250px;
   margin: 150px auto 0px;
 }
+
 .formatBadgeWrapper {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
@@ -164,12 +172,14 @@ export default {
   border-radius: 10px;
   padding: 6px;
 }
+
 .previewWrapper {
   display: grid;
   grid-template-columns: 200px 200px;
   grid-template-rows: 200px 200px 200px;
   grid-gap: 10px;
 }
+
 .preview {
   display: flex;
   justify-content: center;

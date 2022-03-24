@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="wrapper">
+      <font class="numberFont">{{ $route.query.total_items }}</font>
       <h1>
         {{ $route.query.title }} <br />
         {{ asset.text }}
       </h1>
-      <p>{{ $route.query.total_items }} {{ asset.text }}</p>
     </div>
     <div class="imageWrapper">
       <div class="preview one">
@@ -89,30 +89,42 @@ body {
   height: 480px;
   position: relative;
 }
+
 .wrapper {
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
+
+.numberFont {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100px;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
 .imageWrapper {
   display: flex;
 }
+
 .previewWrapeer {
   position: absolute;
   top: 0;
   right: 0;
 }
+
 .preview {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .one {
   width: 400px;
   height: 340px;
 }
-.two {
-  width: 320px;
-  height: 240px;
-}
+
+.two,
 .three {
   width: 320px;
   height: 240px;

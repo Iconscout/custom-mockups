@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="titleWrapper">
+      <p class="totalNumber">{{ $route.query.total_items }}</p>
       <h1 class="title">
         {{ $route.query.title }}
+        <br />
         {{ asset.text }}
       </h1>
-      <p class="totalNumber">{{ $route.query.total_items }} {{ asset.text }}</p>
     </div>
     <div class="previewWrapper">
       <div class="preview">
@@ -115,20 +116,29 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .titleWrapper {
   width: 320px;
   word-wrap: break-word;
   text-align: center;
 }
+
+.totalNumber {
+  font-family: 'Source Sans Pro';
+  font-size: 150px;
+}
+
 .title {
   margin-bottom: 20px;
 }
+
 .previewWrapper {
   display: grid;
   grid-template-columns: 200px 200px;
   grid-template-rows: 200px 200px 200px;
   grid-gap: 10px;
 }
+
 .preview {
   display: flex;
   justify-content: center;

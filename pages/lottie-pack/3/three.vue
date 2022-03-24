@@ -98,19 +98,21 @@ export default {
   width: 720px;
   height: 480px;
   position: relative;
-  /* background: darkblue; */
 }
+
 .wrapper {
   padding: 50px 20px 0px;
-  color: #78aff9;
   text-align: center;
 }
+
 .title {
   margin-bottom: 16px;
 }
+
 .totalNumber {
   margin-bottom: 16px;
 }
+
 .formatWrapper {
   text-align: center;
   width: 330px;
@@ -128,8 +130,8 @@ export default {
 .formatBadgeWrapper {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 18px;
-  height: 55px;
-  width: 100px;
+  height: 45px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,12 +145,14 @@ export default {
   border-radius: 10px;
   padding: 8px;
 }
+
 .previewWrapper {
   width: 100%;
   position: absolute;
   display: flex;
   justify-content: space-between;
 }
+
 .preview {
   display: flex;
   justify-content: center;
@@ -156,14 +160,11 @@ export default {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .one,
 .two,
 .three {
   height: 233px;
   width: 233px;
-}
-
-.two {
-  margin-top: 100px;
 }
 </style>
