@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="wrapper">
       <h1 class="title">
         {{ $route.query.title }}
@@ -27,7 +27,7 @@
       <div class="preview one">
         <lottie
           :key="0"
-          :url="urls[0]"
+          :url="jsons[0]"
           :height="314"
           :width="240"
           :loop="$route.query.loop === 'true'"
@@ -37,7 +37,7 @@
       <div class="preview two">
         <lottie
           :key="1"
-          :url="urls[1]"
+          :url="jsons[1]"
           :height="314"
           :width="240"
           :loop="$route.query.loop === 'true'"
@@ -47,7 +47,7 @@
       <div class="preview three">
         <lottie
           :key="2"
-          :url="urls[2]"
+          :url="jsons[2]"
           :height="314"
           :width="240"
           :loop="$route.query.loop === 'true'"
@@ -98,19 +98,21 @@ export default {
   width: 720px;
   height: 480px;
   position: relative;
-  /* background: darkblue; */
 }
+
 .wrapper {
   padding: 50px 20px 0px;
-  color: #78aff9;
   text-align: center;
 }
+
 .title {
   margin-bottom: 16px;
 }
+
 .totalNumber {
   margin-bottom: 16px;
 }
+
 .formatWrapper {
   text-align: center;
   width: 330px;
@@ -128,8 +130,8 @@ export default {
 .formatBadgeWrapper {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 18px;
-  height: 55px;
-  width: 100px;
+  height: 45px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,12 +145,14 @@ export default {
   border-radius: 10px;
   padding: 8px;
 }
+
 .previewWrapper {
   width: 100%;
   position: absolute;
   display: flex;
   justify-content: space-between;
 }
+
 .preview {
   display: flex;
   justify-content: center;
@@ -156,14 +160,11 @@ export default {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .one,
 .two,
 .three {
   height: 233px;
   width: 233px;
-}
-
-.two {
-  margin-top: 100px;
 }
 </style>

@@ -1,21 +1,21 @@
 <template>
-  <div class="container">
-    <div class="wrapperDiv position-absolute">
+  <div v-if="!$fetchState.pending" class="container">
+    <div class="wrapperDiv">
+      <p class="total">{{ $route.query.total_items }}</p>
       <div class="titleWrapper">
         <h1 class="title">
           {{ $route.query.title }} <br />
           {{ asset.text }}
         </h1>
       </div>
-      <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
     </div>
     <div v-if="urls.length" class="wrapper">
       <div class="preview">
         <lottie
           :key="0"
-          :url="urls[0]"
-          :height="600"
-          :width="720"
+          :url="jsons[0]"
+          :height="400"
+          :width="620"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -70,12 +70,11 @@ body {
   overflow: hidden;
 }
 
-.position-absolute {
-  position: absolute;
-}
-
 .wrapperDiv {
   z-index: 1;
+  display: flex;
+  padding: 0 40px;
+  justify-content: center;
 }
 
 .titleWrapper {
@@ -85,8 +84,7 @@ body {
 
 .title {
   text-align: center;
-  margin: 0;
-  padding: 59px 0 10px 0;
+  padding: 10px 0 10px 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 130%;
@@ -95,20 +93,16 @@ body {
 
 .total {
   text-align: center;
-  padding: 0 50px 59px 50px;
-  margin: 0;
+  margin-right: 20px;
   font-weight: normal;
-  font-size: 21px;
-  line-height: 130%;
-  color: #769bff;
+  font-size: 100px;
   font-family: 'Roboto';
+  bottom: 0px;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  right: -100px;
 }
 </style>

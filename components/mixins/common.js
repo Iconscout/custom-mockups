@@ -1,6 +1,15 @@
+import axios from 'axios'
 import findIndex from 'lodash/findIndex'
 
 export default {
+  async fetch() {
+    if (this.asset.value === 'lottie') {
+      for (let i = 0; i < this.urls.length; i++) {
+        await this.getJson(i, this.urls[i])
+      }
+    }
+  },
+
   data() {
     return {
       assets: [
@@ -8,7 +17,8 @@ export default {
         { value: '3d', text: '3D Illustrations' },
         { value: 'icon', text: 'Icons' },
         { value: 'lottie', text: 'Lottie Animations' }
-      ]
+      ],
+      jsons: []
     }
   },
 
@@ -40,6 +50,14 @@ export default {
       })
 
       return this.assets[index > -1 ? index : 0]
+    }
+  },
+
+  methods: {
+    async getJson(index, url) {
+      await axios.get(url).then((response) => {
+        this.jsons[index] = JSON.stringify(response.data)
+      })
     }
   }
 }

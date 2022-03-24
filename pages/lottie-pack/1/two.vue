@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="wrapper-div position-absolute">
+  <div v-if="!$fetchState.pending" class="container">
+    <div class="wrapperDiv positionAbsolute">
       <div class="titleWrapper">
         <h1 class="title">
           {{ $route.query.title }} <br />
@@ -24,21 +24,19 @@
       </div>
     </div>
     <div v-if="urls.length" class="wrapper">
-      <div class="preview">
-        <lottie
-          :key="0"
-          :url="urls[0]"
-          :height="600"
-          :width="720"
-          :loop="$route.query.loop === 'true'"
-          :speed="$route.query.loop === 'true' ? 1 : 0"
-        />
-      </div>
-    </div>
-    <div class="backgroundImage position-absolute">
       <lottie
         :key="0"
-        :url="urls[0]"
+        :url="jsons[0]"
+        :height="400"
+        :width="600"
+        :loop="$route.query.loop === 'true'"
+        :speed="$route.query.loop === 'true' ? 1 : 0"
+      />
+    </div>
+    <div class="backgroundAnimation positionAbsolute">
+      <lottie
+        :key="0"
+        :url="jsons[0]"
         :height="300"
         :width="360"
         :loop="$route.query.loop === 'true'"
@@ -94,12 +92,12 @@ body {
   overflow: hidden;
 }
 
-.position-absolute {
+.positionAbsolute {
   position: absolute;
 }
 
-.backgroundImage {
-  opacity: 0.2;
+.backgroundAnimation {
+  opacity: 0.1;
   top: 0;
   left: 0;
 }
@@ -132,7 +130,7 @@ body {
   padding: 8px;
 }
 
-.wrapper-div {
+.wrapperDiv {
   z-index: 1;
 }
 
@@ -166,6 +164,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: -100px;
+  right: -50px;
+  bottom: -50px;
 }
 </style>

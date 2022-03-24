@@ -1,9 +1,8 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="titleWrapper">
       <div class="totalNumber">
         <div class="number">{{ $route.query.total_items }}</div>
-        {{ asset.text }}
       </div>
       <h1 class="title">
         {{ $route.query.title }}
@@ -25,7 +24,7 @@
       <div class="preview">
         <lottie
           :key="0"
-          :url="urls[0]"
+          :url="jsons[0]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -35,7 +34,7 @@
       <div class="preview">
         <lottie
           :key="1"
-          :url="urls[1]"
+          :url="jsons[1]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -45,7 +44,7 @@
       <div class="preview">
         <lottie
           :key="2"
-          :url="urls[2]"
+          :url="jsons[2]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -55,7 +54,7 @@
       <div class="preview">
         <lottie
           :key="3"
-          :url="urls[3]"
+          :url="jsons[3]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -65,7 +64,7 @@
       <div class="preview">
         <lottie
           :key="4"
-          :url="urls[4]"
+          :url="jsons[4]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -75,7 +74,7 @@
       <div class="preview">
         <lottie
           :key="5"
-          :url="urls[5]"
+          :url="jsons[5]"
           :height="200"
           :width="200"
           :loop="$route.query.loop === 'true'"
@@ -121,6 +120,10 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Source Sans Pro';
+}
+
 .container {
   overflow: hidden;
   width: 720px;
@@ -129,23 +132,28 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .titleWrapper {
   width: 320px;
   word-wrap: break-word;
   text-align: center;
 }
+
 .totalNumber {
   margin-bottom: 20px;
 }
+
 .number {
   font-size: 5rem;
   font-weight: bold;
 }
+
 .formatBadgesWrapper {
   display: flex;
   width: 250px;
   margin: 150px auto 0px;
 }
+
 .formatBadgeWrapper {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
@@ -164,12 +172,14 @@ export default {
   border-radius: 10px;
   padding: 6px;
 }
+
 .previewWrapper {
   display: grid;
   grid-template-columns: 200px 200px;
   grid-template-rows: 200px 200px 200px;
   grid-gap: 10px;
 }
+
 .preview {
   display: flex;
   justify-content: center;

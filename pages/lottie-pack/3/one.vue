@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="titleWrapper">
       <h1 class="title">{{ $route.query.title }} {{ asset.text }}</h1>
     </div>
@@ -8,9 +8,9 @@
       <div class="preview">
         <lottie
           :key="0"
-          :url="urls[0]"
+          :url="jsons[0]"
           :height="220"
-          :width="294"
+          :width="230"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -18,9 +18,9 @@
       <div class="preview two">
         <lottie
           :key="1"
-          :url="urls[1]"
+          :url="jsons[1]"
           :height="220"
-          :width="294"
+          :width="230"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -28,9 +28,9 @@
       <div class="preview">
         <lottie
           :key="2"
-          :url="urls[2]"
+          :url="jsons[2]"
           :height="220"
-          :width="294"
+          :width="230"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -116,11 +116,11 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  left: -108px;
+  left: -10px;
 }
 
 .preview {
-  width: 294px;
+  width: 250px;
   height: 220px;
   background-size: contain;
   background-position: center;
@@ -132,6 +132,6 @@ body {
 }
 
 .two {
-  margin: 0 27px;
+  margin: 0 15px;
 }
 </style>
