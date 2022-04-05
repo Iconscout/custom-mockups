@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="wrapperDiv positionAbsolute">
       <div class="titleWrapper">
         <h1 class="title">
@@ -26,7 +26,7 @@
     <div v-if="urls.length" class="wrapper">
       <lottie
         :key="0"
-        :url="urls[0]"
+        :url="jsons[0]"
         :height="400"
         :width="600"
         :loop="$route.query.loop === 'true'"
@@ -36,7 +36,7 @@
     <div class="backgroundAnimation positionAbsolute">
       <lottie
         :key="0"
-        :url="urls[0]"
+        :url="jsons[0]"
         :height="300"
         :width="360"
         :loop="$route.query.loop === 'true'"

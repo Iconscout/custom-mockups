@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="wrapperDiv">
       <p class="total">{{ $route.query.total_items }}</p>
       <div class="titleWrapper">
@@ -13,7 +13,7 @@
       <div class="preview">
         <lottie
           :key="0"
-          :url="urls[0]"
+          :url="jsons[0]"
           :height="400"
           :width="620"
           :loop="$route.query.loop === 'true'"

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div v-if="!$fetchState.pending" class="container">
     <div class="wrapper">
       <font class="numberFont">{{ $route.query.total_items }}</font>
       <h1>
@@ -11,7 +11,7 @@
       <div class="preview one">
         <lottie
           :key="0"
-          :url="urls[0]"
+          :url="jsons[0]"
           :height="400"
           :width="340"
           :loop="$route.query.loop === 'true'"
@@ -22,7 +22,7 @@
         <div class="preview two">
           <lottie
             :key="1"
-            :url="urls[1]"
+            :url="jsons[1]"
             :height="320"
             :width="240"
             :loop="$route.query.loop === 'true'"
@@ -32,7 +32,7 @@
         <div class="preview three">
           <lottie
             :key="2"
-            :url="urls[2]"
+            :url="jsons[2]"
             :height="320"
             :width="240"
             :loop="$route.query.loop === 'true'"
