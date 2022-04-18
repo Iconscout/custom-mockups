@@ -13,7 +13,7 @@
         <lottie
           :key="0"
           :url="jsons[0]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -23,7 +23,7 @@
         <lottie
           :key="1"
           :url="jsons[1]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -33,7 +33,7 @@
         <lottie
           :key="2"
           :url="jsons[2]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -43,7 +43,7 @@
         <lottie
           :key="3"
           :url="jsons[3]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -53,7 +53,7 @@
         <lottie
           :key="4"
           :url="jsons[4]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -63,7 +63,7 @@
         <lottie
           :key="5"
           :url="jsons[5]"
-          :height="200"
+          :height="154"
           :width="200"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
@@ -135,7 +135,7 @@ export default {
 .previewWrapper {
   display: grid;
   grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 154px 154px 154px;
   grid-gap: 10px;
 }
 
