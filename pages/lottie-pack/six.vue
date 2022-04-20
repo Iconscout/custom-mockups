@@ -14,7 +14,7 @@
           :key="index"
           class="formatBadgeWrapper"
         >
-          <div class="formatBadge">{{ format }}</div>
+          <div class="formatBadge">{{ format.toUpperCase() }}</div>
         </div>
       </div>
     </div>
@@ -157,19 +157,19 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
   height: 45px;
-  width: 70px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 10px 10px;
-  padding: 6px;
+  padding: 8px;
 }
 
 .formatBadge {
-  width: 55px;
+  width: 80px;
   background: #ffffff;
   border-radius: 10px;
-  padding: 6px;
+  padding: 8px;
 }
 
 .previewWrapper {

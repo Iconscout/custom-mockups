@@ -16,7 +16,7 @@
             :key="index"
             class="formatBadgeWrapper"
           >
-            <div class="formatBadge">{{ format }}</div>
+            <div class="formatBadge">{{ format.toUpperCase() }}</div>
           </div>
         </div>
       </div>
