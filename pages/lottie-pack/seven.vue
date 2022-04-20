@@ -1,20 +1,32 @@
 <template>
   <div v-if="!$fetchState.pending" class="container">
     <div class="titleWrapper">
-      <p class="totalNumber">{{ $route.query.total_items }}</p>
+      <div class="totalNumber">
+        <div class="number">{{ $route.query.total_items }}</div>
+      </div>
       <h1 class="title">
         {{ $route.query.title }}
-        <br />
         {{ asset.text }}
       </h1>
+      <div class="formatBadgesWrapper">
+        <div class="formatBadgeWrapper">
+          <div class="formatBadge">JSON</div>
+        </div>
+        <div class="formatBadgeWrapper">
+          <div class="formatBadge">AEP</div>
+        </div>
+        <div class="formatBadgeWrapper">
+          <div class="formatBadge">GIF</div>
+        </div>
+      </div>
     </div>
     <div class="previewWrapper">
       <div class="preview">
         <lottie
           :key="0"
           :url="jsons[0]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -23,8 +35,8 @@
         <lottie
           :key="1"
           :url="jsons[1]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -33,8 +45,8 @@
         <lottie
           :key="2"
           :url="jsons[2]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -43,8 +55,8 @@
         <lottie
           :key="3"
           :url="jsons[3]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -53,8 +65,8 @@
         <lottie
           :key="4"
           :url="jsons[4]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -63,8 +75,8 @@
         <lottie
           :key="5"
           :url="jsons[5]"
-          :height="154"
-          :width="200"
+          :height="140"
+          :width="140"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -115,6 +127,7 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .titleWrapper {
@@ -124,24 +137,52 @@ export default {
 }
 
 .totalNumber {
-  font-family: 'Source Sans Pro';
-  font-size: 150px;
+  margin-bottom: 20px;
 }
 
-.title {
-  margin-bottom: 20px;
+.number {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.formatBadgesWrapper {
+  display: flex;
+  width: 250px;
+  margin: 150px auto 0px;
+}
+
+.formatBadgeWrapper {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  height: 45px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  padding: 6px;
+}
+
+.formatBadge {
+  width: 55px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
 }
 
 .previewWrapper {
   display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 154px 154px 154px;
-  grid-gap: 10px;
+  padding: 20px 0;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 140px 140px 140px;
+  grid-gap: 10px 10px;
 }
 
 .preview {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
 }
 </style>
