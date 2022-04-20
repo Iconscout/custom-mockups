@@ -12,8 +12,8 @@
         <lottie
           :key="0"
           :url="jsons[0]"
-          :height="400"
-          :width="340"
+          :height="310"
+          :width="310"
           :loop="$route.query.loop === 'true'"
           :speed="$route.query.loop === 'true' ? 1 : 0"
         />
@@ -91,7 +91,7 @@ body {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 40px 20px 20px 40px;
   display: flex;
   align-items: center;
 }
@@ -121,7 +121,7 @@ body {
 
 .one {
   width: 400px;
-  height: 340px;
+  height: 310px;
 }
 
 .two,

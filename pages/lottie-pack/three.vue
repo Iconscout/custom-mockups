@@ -11,14 +11,12 @@
           Available Formats
         </div>
         <div class="formatBadgesWrapper">
-          <div class="formatBadgeWrapper">
-            <div class="formatBadge">JSON</div>
-          </div>
-          <div class="formatBadgeWrapper">
-            <div class="formatBadge">AEP</div>
-          </div>
-          <div class="formatBadgeWrapper">
-            <div class="formatBadge">GIF</div>
+          <div
+            v-for="(format, index) in formats"
+            :key="index"
+            class="formatBadgeWrapper"
+          >
+            <div class="formatBadge">{{ format }}</div>
           </div>
         </div>
       </div>
@@ -125,6 +123,7 @@ export default {
 
 .formatBadgesWrapper {
   display: flex;
+  justify-content: center;
 }
 
 .formatBadgeWrapper {
@@ -135,7 +134,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 10px;
+  margin: 0 10px 10px;
   padding: 10px;
 }
 

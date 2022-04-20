@@ -1,6 +1,6 @@
 <template>
   <div v-if="!$fetchState.pending" class="container">
-    <div class="wrapperDiv positionAbsolute">
+    <div class="wrapperDiv">
       <div class="titleWrapper">
         <h1 class="title">
           {{ $route.query.title }} <br />
@@ -12,14 +12,12 @@
         <div class="formatTitle">
           Available Formats
         </div>
-        <div class="formatBadgeWrapper">
-          <div class="formatBadge">JSON</div>
-        </div>
-        <div class="formatBadgeWrapper">
-          <div class="formatBadge">AEP</div>
-        </div>
-        <div class="formatBadgeWrapper">
-          <div class="formatBadge">GIF</div>
+        <div
+          v-for="(format, index) in formats"
+          :key="index"
+          class="formatBadgeWrapper"
+        >
+          <div class="formatBadge">{{ format }}</div>
         </div>
       </div>
     </div>
@@ -27,8 +25,8 @@
       <lottie
         :key="0"
         :url="jsons[0]"
-        :height="400"
-        :width="600"
+        :height="420"
+        :width="420"
         :loop="$route.query.loop === 'true'"
         :speed="$route.query.loop === 'true' ? 1 : 0"
       />
@@ -104,7 +102,7 @@ body {
 
 .formatWrapper {
   text-align: center;
-  width: 200px;
+  margin-top: auto;
 }
 
 .formatTitle {
@@ -132,6 +130,10 @@ body {
 
 .wrapperDiv {
   z-index: 1;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleWrapper {
@@ -164,7 +166,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: -50px;
-  bottom: -50px;
+  right: 0;
+  bottom: 0;
 }
 </style>

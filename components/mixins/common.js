@@ -24,11 +24,7 @@ export default {
 
   computed: {
     urls() {
-      let queryUrls = this.$route.query.url
-
-      if (!Array.isArray(queryUrls)) {
-        queryUrls = Array(queryUrls)
-      }
+      const queryUrls = this.$route.query.url
 
       const divisor = ~~(this.maxMockups / queryUrls.length)
       const remainder = this.maxMockups % queryUrls.length
@@ -42,6 +38,20 @@ export default {
         urls.push(queryUrls[j])
       }
       return urls
+    },
+
+    formats() {
+      let formats = this.$route.query.formats
+
+      if (!Array.isArray(formats)) {
+        formats = Array(formats)
+      }
+
+      if (formats.length > 3) {
+        formats = formats.slice(0, 3)
+      }
+
+      return formats
     },
 
     asset() {
