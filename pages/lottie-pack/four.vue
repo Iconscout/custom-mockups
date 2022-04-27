@@ -74,9 +74,9 @@ export default {
 </script>
 
 <style>
-body {
+/* body {
   font-family: 'Source Sans Pro';
-}
+} */
 
 .container {
   width: 720px;
@@ -108,7 +108,7 @@ body {
   font-size: 21px;
   line-height: 130%;
   color: #596080;
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
 }
 
 .wrapper {

@@ -109,9 +109,9 @@ export default {
 </script>
 
 <style>
-body {
+/* body {
   font-family: 'Source Sans Pro';
-}
+} */
 
 .container {
   overflow: hidden;

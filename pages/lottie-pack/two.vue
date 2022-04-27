@@ -79,9 +79,9 @@ export default {
 </script>
 
 <style>
-body {
+/* body {
   font-family: 'Source Sans Pro';
-}
+} */
 
 .container {
   overflow: hidden;
@@ -97,7 +97,7 @@ body {
 }
 
 .numberFont {
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
   font-size: 100px;
   margin-right: 20px;
   font-weight: 600;

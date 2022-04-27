@@ -79,9 +79,9 @@ export default {
 </script>
 
 <style>
-body {
+/* body {
   font-family: 'Source Sans Pro';
-}
+} */
 
 .container {
   width: 720px;
@@ -103,6 +103,7 @@ body {
 .formatWrapper {
   text-align: center;
   margin-top: auto;
+  margin-bottom: 20px;
 }
 
 .formatTitle {
@@ -138,7 +139,7 @@ body {
 
 .titleWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .title {
@@ -153,12 +154,12 @@ body {
 
 .total {
   text-align: center;
-  padding: 0 50px 59px 50px;
+  padding: 0 40px 60px 60px;
   margin: 0;
   font-weight: normal;
   font-size: 21px;
   line-height: 130%;
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
 }
 
 .wrapper {
