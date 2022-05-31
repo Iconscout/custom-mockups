@@ -74,9 +74,9 @@ export default {
 </script>
 
 <style>
-/* body {
-  font-family: 'Source Sans Pro';
-} */
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .container {
   width: 720px;
