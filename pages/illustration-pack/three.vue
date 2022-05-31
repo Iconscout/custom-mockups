@@ -7,44 +7,44 @@
         </div>
         <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
       </div>
-      <div
-        class="heroImg"
-        :style="{
-          backgroundImage: `url(${urls[0]})`
-        }"
-      />
-    </div>
-    <div class="imgGrid">
-      <div
-        class="wrapper"
-        :style="{
-          backgroundImage: `url(${urls[1]})`
-        }"
-      />
-      <div
-        class="wrapper"
-        :style="{
-          backgroundImage: `url(${urls[2]})`
-        }"
-      />
-      <div
-        class="wrapper"
-        :style="{
-          backgroundImage: `url(${urls[3]})`
-        }"
-      />
-      <div
-        class="wrapper"
-        :style="{
-          backgroundImage: `url(${urls[4]})`
-        }"
-      />
-      <div
-        class="wrapper"
-        :style="{
-          backgroundImage: `url(${urls[5]})`
-        }"
-      />
+      <div class="imgGrid">
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[0]})`
+          }"
+        />
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[1]})`
+          }"
+        />
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[2]})`
+          }"
+        />
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[3]})`
+          }"
+        />
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[4]})`
+          }"
+        />
+        <div
+          class="image"
+          :style="{
+            backgroundImage: `url(${urls[5]})`
+          }"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -84,6 +84,7 @@ body {
   padding: 0;
   font-family: 'Nanum Gothic';
 }
+
 .container {
   width: 720px;
   height: 480px;
@@ -93,12 +94,14 @@ body {
 
 .main {
   display: flex;
+  height: 100%;
 }
 
 .content {
-  padding: 50px 0 0 50px;
-  width: 246px;
+  padding: 50px 50px 0;
+  width: 300px;
   z-index: 10;
+  background: #f0f0f0;
 }
 
 .title {
@@ -118,41 +121,23 @@ body {
   font-family: 'Roboto';
 }
 
-.heroImg {
-  width: 430px;
-  height: 322px;
-  position: absolute;
-  right: 0;
-  top: -20px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: white;
-  overflow: hidden;
-  border-bottom-left-radius: 5px;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-}
-
 .imgGrid {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 35px;
-  position: absolute;
-  left: -65px;
-  bottom: 40px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 140px 140px 140px;
+  grid-gap: 15px;
+  margin: auto;
 }
 
-.wrapper {
-  width: 140px;
-  height: 105px;
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  border-radius: 20px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: white;
-  margin: 0 15px;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
 }
 </style>
