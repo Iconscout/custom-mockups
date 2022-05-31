@@ -118,6 +118,10 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .container {
   overflow: hidden;
   width: 720px;
