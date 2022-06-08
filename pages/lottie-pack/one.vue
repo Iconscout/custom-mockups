@@ -131,7 +131,7 @@ body {
 
 .wrapperDiv {
   z-index: 1;
-  width: 300px;
+  width: 305px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -144,7 +144,7 @@ body {
 
 .title {
   text-align: center;
-  margin: 0;
+  margin-left: 5px;
   padding: 59px 0 10px 0;
   font-weight: bold;
   font-size: 36px;

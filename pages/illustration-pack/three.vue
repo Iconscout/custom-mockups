@@ -32,18 +32,6 @@
             backgroundImage: `url(${urls[3]})`
           }"
         />
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[4]})`
-          }"
-        />
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[5]})`
-          }"
-        />
       </div>
     </div>
   </div>
@@ -123,8 +111,8 @@ body {
 
 .imgGrid {
   display: grid;
-  grid-template-columns: 140px 140px;
-  grid-template-rows: 140px 140px 140px;
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 180px 180px;
   grid-gap: 15px;
   margin: auto;
 }
