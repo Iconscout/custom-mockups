@@ -1,13 +1,15 @@
 <template>
   <div v-if="!$fetchState.pending" class="container">
     <div class="titleWrapper">
-      <div class="totalNumber">
-        <div class="number">{{ $route.query.total_items }}</div>
-      </div>
       <h1 class="title">
         {{ $route.query.title }}
         {{ asset.text }}
       </h1>
+      <div class="totalNumber">
+        <div class="number">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
+      </div>
       <div class="formatBadgesWrapper">
         <div
           v-for="(format, index) in formats"
@@ -143,7 +145,7 @@ body {
 }
 
 .number {
-  font-size: 5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
