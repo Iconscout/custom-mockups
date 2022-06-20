@@ -1,37 +1,98 @@
 <template>
   <div class="container">
-    <div class="main">
-      <div class="content">
-        <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }} {{ asset.text }}</h1>
+    <div class="background" :style="`background-color: ${bgColor};`">
+      <img src="@/assets/images/dot-bg.svg" />
+    </div>
+    <div class="contentWrapper">
+      <div class="wrapper">
+        <img
+          v-if="isExclusive"
+          src="@/assets/images/exclusive.svg"
+          height="77"
+          width="77"
+          class="exclusiveImage"
+        />
+        <h1 class="title">Illustration Pack Name</h1>
+        <div class="numberText">10 Illustrations</div>
+        <div class="formatBadgeWrapper">
+          <div v-for="format in formats" :key="format" class="formatBadge">
+            {{ format.toUpperCase() }}
+          </div>
         </div>
-        <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
       </div>
-      <div class="imgGrid">
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[0]})`
-          }"
-        />
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[1]})`
-          }"
-        />
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[2]})`
-          }"
-        />
-        <div
-          class="image"
-          :style="{
-            backgroundImage: `url(${urls[3]})`
-          }"
-        />
+      <div class="imageGrid">
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[0]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[1]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[2]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[3]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[4]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[5]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[6]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[7]})`
+            }"
+          />
+        </div>
+        <div class="bgRound">
+          <div
+            class="previewImage"
+            :style="{
+              backgroundImage: `url(${urls[8]})`
+            }"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -45,7 +106,7 @@ export default {
 
   data() {
     return {
-      maxMockups: 6
+      maxMockups: 9
     }
   },
 
@@ -54,7 +115,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap'
+          'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -66,66 +127,92 @@ export default {
 </script>
 
 <style>
-*,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Nanum Gothic';
+  font-family: 'Source Sans Pro';
 }
 
 .container {
-  width: 720px;
-  height: 480px;
-  overflow: hidden;
+  width: 834px;
+  height: 556px;
   position: relative;
+  overflow: hidden;
 }
 
-.main {
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contentWrapper {
   display: flex;
-  height: 100%;
+  padding: 60px 9px 60px 48px;
+  justify-content: space-between;
 }
 
-.content {
-  padding: 50px 50px 0;
-  width: 300px;
-  z-index: 10;
-  background: #f0f0f0;
+.exclusiveImage {
+  margin-bottom: 26px;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 130%;
-  width: 215px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  max-width: 342px;
 }
 
-.total {
-  padding: 16px 0 40px 0;
-  line-height: 130%;
-  color: #9f9faf;
-  width: 215px;
-  font-weight: 300;
-  font-size: 21px;
-  font-family: 'Roboto';
+.numberText {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 72px;
+  margin-bottom: 56px;
 }
 
-.imgGrid {
-  display: grid;
-  grid-template-columns: 180px 180px;
-  grid-template-rows: 180px 180px;
-  grid-gap: 15px;
-  margin: auto;
+.formatBadgeWrapper {
+  display: flex;
 }
 
-.image {
+.formatBadge {
+  width: 50px;
+  height: 28px;
+  background: #000000;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 10px;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 136px 136px 136px;
+  grid-template-rows: 136px 136px 136px;
+  grid-gap: 12px 12px;
+}
+
+.imageGridRow {
+  display: flex;
+  gap: 16px;
+}
+
+.previewImage {
+  width: 136px;
+  height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: white;
+}
+
+.bgRound {
+  background: white;
+  border-radius: 50%;
 }
 </style>

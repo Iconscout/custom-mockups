@@ -23,6 +23,14 @@ export default {
   },
 
   computed: {
+    bgColor() {
+      return `#${this.$route.query.bg_color}`
+    },
+
+    isExclusive() {
+      return this.$route.query.exclusive === 'true' || false
+    },
+
     urls() {
       const queryUrls = this.$route.query.url
 

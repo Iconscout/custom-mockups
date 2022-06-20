@@ -1,32 +1,9 @@
 <template>
   <div class="container">
-    <div class="topBackground">
-      <svg
-        width="454"
-        height="471"
-        viewBox="0 0 454 471"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M137.5 168.5C-62.9 132.1 -0.66666 -78.6667 55.5 -179.5L540.5 -66.5C545.667 118.667 523.6 485.3 394 470.5C232 452 388 214 137.5 168.5Z"
-          :fill="`${bgColor}`"
-        />
-      </svg>
-    </div>
-    <div class="bottomBackground">
-      <svg
-        width="681"
-        height="108"
-        viewBox="0 0 681 108"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M279 48C131.8 -38.8 -33 11.8333 -97 48C-116 259 449.5 232 585 229.5C720.5 227 693 116 617 132C541 148 463 156.5 279 48Z"
-          :fill="`${bgColor}`"
-        />
-      </svg>
+    <div class="rightBackground">
+      <svg width="563" height="556" viewBox="0 0 563 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 243C195 53 51.5 -106.667 0 -161L594 -117.5V823L230.5 804.5C-43.5 617.5 131.275 398.936 160 243Z" :fill="`${bgColor}`"/>
+    </svg>
     </div>
     <div class="contentWrapper">
       <div class="wrapper">
@@ -95,28 +72,21 @@ body {
   overflow: hidden;
 }
 
-.topBackground {
+.rightBackground {
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
 
-.bottomBackground {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .contentWrapper {
   display: flex;
-  padding: 50px 23px 50px 50px;
+  padding: 46px 0 46px 48px;
   justify-content: space-between;
 }
 
 .exclusiveImage {
-  margin-bottom: 8px;
+  margin-bottom: 26px;
 }
 
 .title {
@@ -130,7 +100,7 @@ body {
   font-weight: 400;
   font-size: 34px;
   line-height: 72px;
-  margin-bottom: 20px;
+  margin-bottom: 56px;
 }
 
 .formatBadgeWrapper {
@@ -153,8 +123,8 @@ body {
 }
 
 .previewImage1 {
-  width: 410px;
-  height: 455px;
+  width: 420px;
+  height: 465px;
   display: flex;
   justify-content: center;
   align-items: center;
