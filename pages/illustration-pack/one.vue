@@ -10,7 +10,11 @@
       >
         <path
           d="M137.5 168.5C-62.9 132.1 -0.66666 -78.6667 55.5 -179.5L540.5 -66.5C545.667 118.667 523.6 485.3 394 470.5C232 452 388 214 137.5 168.5Z"
-          :fill="`${bgColor}`"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
         />
       </svg>
     </div>
@@ -24,10 +28,22 @@
       >
         <path
           d="M279 48C131.8 -38.8 -33 11.8333 -97 48C-116 259 449.5 232 585 229.5C720.5 227 693 116 617 132C541 148 463 156.5 279 48Z"
-          :fill="`${bgColor}`"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
         />
       </svg>
     </div>
+    <!-- <div class="flexDiv">
+      <div
+        v-for="(color, i) in palette"
+        :key="i"
+        :style="{ backgroundColor: `rgb(${color[0]},${color[1]},${color[2]})` }"
+        class="colorDiv"
+      ></div>
+    </div> -->
     <div class="contentWrapper">
       <div class="wrapper">
         <img
@@ -37,8 +53,13 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 class="title">Illustration Pack Name</h1>
-        <div class="numberText">10 Illustrations</div>
+        <h1 :style="`color: ${packTitleColor};`" class="title">
+          {{ $route.query.title }} <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
             {{ format.toUpperCase() }}
@@ -88,6 +109,15 @@ body {
   font-family: 'Source Sans Pro';
 }
 
+/* .flexDiv {
+  display: flex;
+}
+.colorDiv {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+} */
+
 .container {
   width: 834px;
   height: 556px;
@@ -123,7 +153,9 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
-  max-width: 342px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 .numberText {

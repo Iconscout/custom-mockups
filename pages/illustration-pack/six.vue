@@ -9,8 +9,13 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 class="title">Illustration Pack Name</h1>
-        <div class="numberText">10 Illustrations</div>
+        <h1 :style="`color: ${packTitleColor};`" class="title">
+          {{ $route.query.title }} <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
             {{ format.toUpperCase() }}
@@ -60,7 +65,7 @@
               <div
                 class="image"
                 :style="{
-                  backgroundImage: `url(${urls[3]})`
+                  backgroundImage: `url(${urls[0]})`
                 }"
               />
             </div>
@@ -68,7 +73,7 @@
               <div
                 class="image"
                 :style="{
-                  backgroundImage: `url(${urls[3]})`
+                  backgroundImage: `url(${urls[1]})`
                 }"
               />
             </div>
@@ -76,7 +81,7 @@
               <div
                 class="image"
                 :style="{
-                  backgroundImage: `url(${urls[3]})`
+                  backgroundImage: `url(${urls[2]})`
                 }"
               />
             </div>
@@ -96,7 +101,7 @@
               <div
                 class="image"
                 :style="{
-                  backgroundImage: `url(${urls[3]})`
+                  backgroundImage: `url(${urls[4]})`
                 }"
               />
             </div>
@@ -104,7 +109,7 @@
               <div
                 class="image"
                 :style="{
-                  backgroundImage: `url(${urls[3]})`
+                  backgroundImage: `url(${urls[5]})`
                 }"
               />
             </div>
@@ -166,24 +171,28 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding-top: 77px;
 }
 
-/* .exclusiveImage {
-  margin-bottom: 26px;
-} */
+.exclusiveImage {
+  margin-top: -77px;
+}
 
 .title {
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
-  max-width: 342px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .numberText {
   font-weight: 400;
   font-size: 34px;
   line-height: 72px;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 .formatBadgeWrapper {

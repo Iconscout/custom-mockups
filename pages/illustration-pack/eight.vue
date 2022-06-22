@@ -1,9 +1,22 @@
 <template>
   <div class="container">
     <div class="rightBackground">
-      <svg width="563" height="556" viewBox="0 0 563 556" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M160 243C195 53 51.5 -106.667 0 -161L594 -117.5V823L230.5 804.5C-43.5 617.5 131.275 398.936 160 243Z" :fill="`${bgColor}`"/>
-    </svg>
+      <svg
+        width="563"
+        height="556"
+        viewBox="0 0 563 556"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M160 243C195 53 51.5 -106.667 0 -161L594 -117.5V823L230.5 804.5C-43.5 617.5 131.275 398.936 160 243Z"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
+        />
+      </svg>
     </div>
     <div class="contentWrapper">
       <div class="wrapper">
@@ -14,8 +27,13 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 class="title">Illustration Pack Name</h1>
-        <div class="numberText">10 Illustrations</div>
+        <h1 :style="`color: ${packTitleColor};`" class="title">
+          {{ $route.query.title }} <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+            {{ $route.query.total_items }} {{ asset.text }}
+        </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
             {{ format.toUpperCase() }}
@@ -93,7 +111,9 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
-  max-width: 342px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 .numberText {

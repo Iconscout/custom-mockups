@@ -8,7 +8,16 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="292" cy="292" r="292" :fill="`${bgColor}`" />
+        <circle
+          cx="292"
+          cy="292"
+          r="292"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
+        />
       </svg>
     </div>
     <div class="topBackground">
@@ -25,7 +34,11 @@
           rx="219"
           ry="259"
           transform="rotate(-41.1419 179.328 137.134)"
-          :fill="`${bgColor}`"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
         />
       </svg>
     </div>
@@ -38,8 +51,13 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 class="title">Illustration Pack Name</h1>
-        <div class="numberText">10 Illustrations</div>
+        <h1 :style="`color: ${packTitleColor};`" class="title">
+          {{ $route.query.title }} <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
             {{ format.toUpperCase() }}
@@ -146,7 +164,9 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
-  max-width: 342px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 .numberText {

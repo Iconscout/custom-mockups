@@ -1,6 +1,15 @@
 <template>
   <div class="container">
-    <div class="background" :style="`background-color: ${bgColor};`">
+    <div
+      class="background"
+      :style="
+        `background-color: ${
+          $route.query.bg_color && $route.query.bg_color !== ''
+            ? ('#', $route.query.bg_color)
+            : bgColor
+        };`
+      "
+    >
       <img src="@/assets/images/dot-bg.svg" />
     </div>
     <div class="contentWrapper">
@@ -12,8 +21,13 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 class="title">Illustration Pack Name</h1>
-        <div class="numberText">10 Illustrations</div>
+        <h1 :style="`color: ${packTitleColor};`" class="title">
+          {{ $route.query.title }} <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
             {{ format.toUpperCase() }}
@@ -159,7 +173,9 @@ body {
   font-weight: 700;
   font-size: 60px;
   line-height: 70px;
-  max-width: 342px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 .numberText {
