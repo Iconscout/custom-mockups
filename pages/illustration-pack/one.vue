@@ -53,8 +53,11 @@
           width="77"
           class="exclusiveImage"
         />
-        <h1 :style="`color: ${packTitleColor};`" class="title">
-          {{ $route.query.title }} <br />
+        <h1 class="title">
+          <span :style="`color: ${packTitleColor};`">{{
+            $route.query.title
+          }}</span>
+          <br />
           {{ asset.text }} Pack
         </h1>
         <div class="numberText">
