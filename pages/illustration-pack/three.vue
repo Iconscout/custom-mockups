@@ -3,10 +3,10 @@
     <div
       class="background"
       :style="
-        `background-color: ${
+        `background-color: #${
           $route.query.bg_color && $route.query.bg_color !== ''
-            ? ('#', $route.query.bg_color)
-            : bgColor
+            ? $route.query.bg_color
+            : bgColor && bgColor.replace('#', '')
         };`
       "
     >
