@@ -103,6 +103,12 @@ body {
 
 .exclusiveImage {
   margin-bottom: 26px;
+  margin-top: -30px;
+}
+
+.wrapper {
+  position: absolute;
+  padding-top: 100px;
 }
 
 .title {
@@ -118,7 +124,7 @@ body {
   font-weight: 400;
   font-size: 34px;
   line-height: 72px;
-  margin-bottom: 56px;
+  margin-bottom: 30px;
 }
 
 .formatBadgeWrapper {
@@ -145,6 +151,7 @@ body {
   grid-template-columns: repeat(3, 160px);
   grid-template-rows: repeat(3, 165px);
   grid-gap: 10px;
+  margin-left: auto;
 }
 
 .previewImage {
