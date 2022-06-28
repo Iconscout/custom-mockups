@@ -3,6 +3,11 @@ variables:
 
   ICONSCOUT_VERSION: $CI_ENVIRONMENT_SLUG-$CI_COMMIT_SHORT_SHA
 
+  # Production/Staging Variables
+  K8_CLUSTER_NAME: iconscout-prod
+  PROJECT_ID: iconscout-1539
+  CUSTOM_MOCKUP_IMAGE: us.gcr.io/iconscout-1539/iconscout/custom-mockups
+
   # Development Variables
   DEV_K8_CLUSTER_NAME: iconscout-dev
   DEV_PROJECT_ID: iconscout-dev-246510
@@ -16,5 +21,7 @@ stages:
   - deploy
 
 include:
+  # Production
+  - local: "/.gitlab/.gitlab-ci.production.yaml"
   # Development
   - local: "/.gitlab/.gitlab-ci.development.yaml"

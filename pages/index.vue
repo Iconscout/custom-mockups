@@ -3,10 +3,10 @@
     <div>
       <img src="https://iconscout.com/assets/images/iconscout-logo.color.svg" />
       <h1 class="title">
-        Iconscout Illustrations Mockups
+        Iconscout Custom Mockups
       </h1>
       <h2 class="subtitle">
-        Get high-quality Icons, Illustrations, and Stock photos at one place
+        Get high-quality Icons, Illustrations, 3D Assets, and Lottie Animations at one place
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
