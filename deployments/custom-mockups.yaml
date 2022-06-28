@@ -1,0 +1,71 @@
+# Custom Mockups Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-mockups
+  labels:
+    app: iconscout
+    tier: custom-mockups
+    environment: production
+    version: ${ICONSCOUT_VERSION}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: custom-mockups
+  template:
+    metadata:
+      labels:
+        tier: custom-mockups
+        environment: production
+        version: ${ICONSCOUT_VERSION}
+    spec:
+      containers:
+        - name: node
+          image: us.gcr.io/iconscout-1539/iconscout/custom-mockups/node:${ICONSCOUT_VERSION}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "200m"
+            limits:
+              memory: "350Mi"
+              cpu: "250m"
+      restartPolicy: Always
+---
+# Seller Load Balancer Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: custom-mockups-service
+  labels:
+    tier: custom-mockups
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+  selector:
+    tier: custom-mockups
+---
+# Seller HPA
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: custom-mockups
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: custom-mockups
+  minReplicas: 1
+  maxReplicas: 2
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: 95
+    - type: Resource
+      resource:
+        name: memory
+        targetAverageUtilization: 95

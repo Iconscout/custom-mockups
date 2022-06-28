@@ -1,0 +1,38 @@
+# Build Development Custom Mockups
+dev_build_custom_mockups:
+  stage: build
+  image: registry.gitlab.com/iconscout/docker/docker-with-gcloud:latest
+  before_script:
+    # Write our GCP service account private key into a file
+    - echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+    # Login to GCP Docker Registry
+    - docker login -u _json_key --password-stdin https://us.gcr.io < ${HOME}/gcloud-service-key.json
+    # Login to GitLab Docker Registry
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+  script:
+    - docker build --network host --pull -t ${CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION} -f ./Dockerfile ./
+    - docker push ${CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION}
+  only:
+    - master@iconscout/iconscout
+  environment:
+    name: production
+
+dev_deploy_custom_mockups:
+  stage: deploy
+  image: kiwigrid/gcloud-kubectl-helm:latest
+  before_script:
+    # Write our GCP service account private key into a file
+    - echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+    - gcloud config set project ${PROJECT_ID}
+    - gcloud container clusters get-credentials ${K8_CLUSTER_NAME} --zone=us-central1-c
+    - kubectl config set-context ${K8_CLUSTER_NAME}
+  script:
+    - cat ./deployments/custom-mockups.yaml | sed "s/\${ICONSCOUT_VERSION}/$ICONSCOUT_VERSION/g" | kubectl apply -f -
+  needs:
+    - dev_build_custom_mockups
+  only:
+    - master@iconscout/iconscout
+  environment:
+    name: production
