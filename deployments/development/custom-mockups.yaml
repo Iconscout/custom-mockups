@@ -1,0 +1,49 @@
+# Custom Mockups Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-custom-mockups
+  labels:
+    app: iconscout
+    tier: dev-custom-mockups
+    environment: development
+    version: ${ICONSCOUT_VERSION}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: dev-custom-mockups
+  template:
+    metadata:
+      labels:
+        tier: dev-custom-mockups
+        environment: development
+        version: ${ICONSCOUT_VERSION}
+    spec:
+      containers:
+        - name: node
+          image: us.gcr.io/iconscout-dev-246510/iconscout/custom-mockups/node:${ICONSCOUT_VERSION}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "250m"
+            limits:
+              memory: "500Mi"
+              cpu: "500m"
+      restartPolicy: Always
+---
+# GLTF Preview Load Balancer Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-custom-mockups-service
+  labels:
+    tier: dev-custom-mockups
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+  selector:
+    tier: dev-custom-mockups
