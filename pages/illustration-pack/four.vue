@@ -209,12 +209,13 @@ body {
 
 .contentWrapper {
   display: flex;
-  padding: 80px 0 108px 48px;
+  padding: 130px 0 108px 48px;
   justify-content: space-between;
 }
 
 .exclusiveImage {
   margin-bottom: 34px;
+  margin-top: -65px;
 }
 
 .title {
@@ -238,8 +239,9 @@ body {
 }
 
 .formatBadge {
-  width: 50px;
+  min-width: 50px;
   height: 28px;
+  padding: 0 5px;
   background: #000000;
   border-radius: 5px;
   font-weight: 700;

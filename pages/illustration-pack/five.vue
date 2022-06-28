@@ -158,7 +158,7 @@ body {
 
 .contentWrapper {
   display: flex;
-  padding: 135px 0 70px 50px;
+  padding: 100px 0 70px 50px;
   justify-content: space-between;
 }
 
@@ -188,8 +188,9 @@ body {
 }
 
 .formatBadge {
-  width: 50px;
+  min-width: 50px;
   height: 28px;
+  padding: 0 5px;
   background: #000000;
   border-radius: 5px;
   font-weight: 700;

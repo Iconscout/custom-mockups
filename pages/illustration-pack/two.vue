@@ -184,8 +184,9 @@ body {
 }
 
 .formatBadge {
-  width: 50px;
+  min-width: 50px;
   height: 28px;
+  padding: 0 5px;
   background: #000000;
   border-radius: 5px;
   font-weight: 700;

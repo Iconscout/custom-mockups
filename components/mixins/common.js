@@ -10,7 +10,7 @@ export default {
         await this.getJson(i, this.urls[i])
       }
     }
-    if (this.asset.value === 'illustration') {
+    if (this.asset.value === 'illustration' || this.asset.value === '3d') {
       if (!this.$route.query.bg_color || this.$route.query.bg_color === '') {
         await this.getBase64(this.urls[0])
       }
