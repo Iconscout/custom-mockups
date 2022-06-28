@@ -14,7 +14,7 @@ dev_build_custom_mockups:
     - docker build --network host --pull -t ${DEV_CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION} -f ./Dockerfile ./
     - docker push ${DEV_CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION}
   except:
-    - master@iconscout/iconscout
+    - master
   environment:
     name: development
 
@@ -33,6 +33,6 @@ dev_deploy_custom_mockups:
   needs:
     - dev_build_custom_mockups
   except:
-    - master@iconscout/iconscout
+    - master
   environment:
     name: development

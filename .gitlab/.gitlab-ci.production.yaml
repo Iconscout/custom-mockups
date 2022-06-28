@@ -1,5 +1,5 @@
 # Build Development Custom Mockups
-dev_build_custom_mockups:
+build_custom_mockups:
   stage: build
   image: registry.gitlab.com/iconscout/docker/docker-with-gcloud:latest
   before_script:
@@ -14,11 +14,11 @@ dev_build_custom_mockups:
     - docker build --network host --pull -t ${CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION} -f ./Dockerfile ./
     - docker push ${CUSTOM_MOCKUP_IMAGE}/node:${ICONSCOUT_VERSION}
   only:
-    - master@iconscout/iconscout
+    - master
   environment:
     name: production
 
-dev_deploy_custom_mockups:
+deploy_custom_mockups:
   stage: deploy
   image: kiwigrid/gcloud-kubectl-helm:latest
   before_script:
@@ -31,8 +31,8 @@ dev_deploy_custom_mockups:
   script:
     - cat ./deployments/custom-mockups.yaml | sed "s/\${ICONSCOUT_VERSION}/$ICONSCOUT_VERSION/g" | kubectl apply -f -
   needs:
-    - dev_build_custom_mockups
+    - build_custom_mockups
   only:
-    - master@iconscout/iconscout
+    - master
   environment:
     name: production
