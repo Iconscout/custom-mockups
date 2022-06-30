@@ -1,34 +1,123 @@
 <template>
   <div class="container">
-    <div class="main">
-      <div class="content">
-        <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }} {{ asset.text }}</h1>
-        </div>
-        <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
-      </div>
-      <div class="pattern">
-        <img src="@/assets/images/box-pattern.png" />
-      </div>
+    <div class="contentWrapper">
       <div class="wrapper">
-        <div
-          class="preview1"
-          :style="{
-            backgroundImage: `url(${urls[0]})`
-          }"
+        <img
+          v-if="isExclusive"
+          src="@/assets/images/exclusive.svg"
+          height="77"
+          width="77"
+          class="exclusiveImage"
         />
-        <div
-          class="preview2"
-          :style="{
-            backgroundImage: `url(${urls[1]})`
-          }"
-        />
-        <div
-          class="preview3"
-          :style="{
-            backgroundImage: `url(${urls[2]})`
-          }"
-        />
+        <h1 class="title">
+          <span :style="`color: ${packTitleColor};`">{{
+            $route.query.title
+          }}</span>
+          <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
+        </div>
+        <div class="formatBadgeWrapper">
+          <div v-for="format in formats" :key="format" class="formatBadge">
+            {{ format.toUpperCase() }}
+          </div>
+        </div>
+      </div>
+      <div class="rowGrid">
+        <div class="row1">
+          <div class="columnGrid">
+            <div class="previewImage image1">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[0]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image2">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[1]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image3">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[2]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image4">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[3]})`
+                }"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="columnGrid">
+            <div class="previewImage image5">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[0]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image6">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[1]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image7">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[2]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image8">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[3]})`
+                }"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row3">
+          <div class="columnGrid3">
+            <div class="previewImage image9">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[4]})`
+                }"
+              />
+            </div>
+            <div class="previewImage image10">
+              <div
+                class="image"
+                :style="{
+                  backgroundImage: `url(${urls[5]})`
+                }"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,7 +131,7 @@ export default {
 
   data() {
     return {
-      maxMockups: 3
+      maxMockups: 10
     }
   },
 
@@ -50,7 +139,8 @@ export default {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Alatsi&display=swap'
+        href:
+          'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -63,104 +153,170 @@ export default {
 
 <style>
 body {
-  font-family: 'Alatsi';
+  font-family: 'Source Sans Pro';
 }
 
 .container {
-  width: 720px;
-  height: 480px;
+  width: 834px;
+  height: 556px;
+  position: relative;
   overflow: hidden;
 }
 
-.main {
+.contentWrapper {
   display: flex;
+  padding: 150px 0 73px;
   justify-content: space-between;
-  position: relative;
-}
-
-.content {
-  display: block;
-  padding: 60px 0 0 60px;
-}
-
-.pattern {
-  position: absolute;
-  top: 247px;
-  right: 479px;
-}
-
-.titleWrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.title {
-  font-size: 36px;
-  line-height: 130%;
-  width: 215px;
-}
-
-.total {
-  line-height: 130%;
-  color: #9f9faf;
-  width: 215px;
-  font-weight: 300;
-  font-size: 21px;
-  margin-top: 15px;
-  font-family: 'Roboto';
 }
 
 .wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-top: 77px;
 }
 
-.preview1 {
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  top: 30px;
-  z-index: 10;
-  right: 0;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-  border-radius: 15px;
+.exclusiveImage {
+  margin-top: -77px;
 }
 
-.preview2 {
-  width: 266px;
-  height: 200px;
-  position: absolute;
-  top: 250px;
-  right: 305px;
-  border-radius: 18px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-  border-radius: 15px;
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
+  text-align: center;
 }
 
-.preview3 {
-  width: 200px;
-  height: 150px;
-  z-index: 15;
+.numberText {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 72px;
+  margin-bottom: 2px;
+}
+
+.formatBadgeWrapper {
+  display: flex;
+}
+
+.formatBadge {
+  min-width: 50px;
+  height: 28px;
+  padding: 0 5px;
+  background: #000000;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.rowGrid {
   position: absolute;
-  top: 290px;
-  right: 40px;
-  border-radius: 8px;
-  background-size: contain;
+  display: grid;
+  transform: rotate(6deg);
+  top: -148px;
+  grid-template-rows: repeat(3, 202px);
+  grid-gap: 16px;
+  z-index: -1;
+}
+
+.row1 {
+  margin-left: 50px;
+}
+
+.row2 {
+  margin-left: -50px;
+}
+
+.row3 {
+  margin-left: -90px;
+}
+
+.columnGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-gap: 16px;
+}
+
+.columnGrid3 {
+  display: grid;
+  grid-template-columns: repeat(12, 101px);
+  grid-gap: 20px;
+}
+
+.previewImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  filter: drop-shadow(0px 2.1967px 2.1967px rgba(0, 0, 0, 0.25));
+  background-color: white;
+}
+
+.image {
+  width: 181px;
+  height: 181px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-  border-radius: 15px;
+}
+
+.image1,
+.image5 {
+  /* background-color: #fffcdf; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image2,
+.image6 {
+  /* background-color: #ecf1ff; */
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image3,
+.image7 {
+  /* background-color: #eafff0; */
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image4,
+.image8 {
+  /* background-color: #ffefef; */
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image9 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image10 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 </style>

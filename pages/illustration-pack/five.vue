@@ -1,64 +1,99 @@
 <template>
   <div class="container">
-    <div class="main">
-      <div class="content">
-        <div class="titleWrapper">
-          <h1 class="title">{{ $route.query.title }} {{ asset.text }}</h1>
+    <div class="topBackground">
+      <svg
+        width="336"
+        height="222"
+        viewBox="0 0 336 222"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M333 126.594C311 213.594 246.393 221.594 181.5 221.594C116.607 221.594 0 100.987 0 36.0938C0 -28.7997 116.607 -13.4062 181.5 -13.4062C246.393 -13.4062 353.5 -34.4062 333 126.594Z"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
+        />
+      </svg>
+      <svg
+        width="220"
+        height="213"
+        viewBox="0 0 220 213"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M248 67.3204C248 130.191 193.885 219.604 65.5906 212.614C-10.9733 212.614 41.8774 138.18 41.8774 75.309C41.8774 12.4379 -45.023 -59 31.5408 -59C213.95 -52.0099 248 4.44931 248 67.3204Z"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
+        />
+      </svg>
+    </div>
+    <div class="bottomBackground">
+      <svg
+        width="429"
+        height="334"
+        viewBox="0 0 429 334"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M431 320.5C431 422.949 289.449 362.5 187 362.5C84.5512 362.5 0 291.449 0 189C0 86.5512 111.551 0 214 0C358 14 431 218.051 431 320.5Z"
+          :fill="
+            $route.query.bg_color && $route.query.bg_color !== ''
+              ? `#${$route.query.bg_color}`
+              : `${bgColor}`
+          "
+        />
+      </svg>
+    </div>
+    <div class="contentWrapper">
+      <div class="wrapper">
+        <img
+          v-if="isExclusive"
+          src="@/assets/images/exclusive.svg"
+          height="77"
+          width="77"
+          class="exclusiveImage"
+        />
+        <h1 class="title">
+          <span :style="`color: ${packTitleColor};`">{{
+            $route.query.title
+          }}</span>
+          <br />
+          {{ asset.text }} Pack
+        </h1>
+        <div class="numberText">
+          {{ $route.query.total_items }} {{ asset.text }}
         </div>
-        <p class="total">{{ $route.query.total_items }} {{ asset.text }}</p>
+        <div class="formatBadgeWrapper">
+          <div v-for="format in formats" :key="format" class="formatBadge">
+            {{ format.toUpperCase() }}
+          </div>
+        </div>
       </div>
-
-      <div class="pattern1">
-        <img src="@/assets/images/dots.png" />
-      </div>
-
-      <div class="pattern2">
-        <img src="@/assets/images/dots.png" />
-      </div>
-
-      <div
-        class="wrapper last"
-        :style="{
-          backgroundImage: `url(${urls[0]})`
-        }"
-      />
-      <div class="firstColumn">
+      <div class="imageGrid">
         <div
-          class="wrapper"
+          class="previewImage image1"
+          :style="{
+            backgroundImage: `url(${urls[0]})`
+          }"
+        />
+        <div
+          class="previewImage image2"
           :style="{
             backgroundImage: `url(${urls[1]})`
           }"
         />
         <div
-          class="wrapper"
+          class="previewImage image3"
           :style="{
             backgroundImage: `url(${urls[2]})`
-          }"
-        />
-        <div
-          class="wrapper"
-          :style="{
-            backgroundImage: `url(${urls[3]})`
-          }"
-        />
-      </div>
-      <div class="secondColumn">
-        <div
-          class="wrapper"
-          :style="{
-            backgroundImage: `url(${urls[4]})`
-          }"
-        />
-        <div
-          class="wrapper"
-          :style="{
-            backgroundImage: `url(${urls[5]})`
-          }"
-        />
-        <div
-          class="wrapper"
-          :style="{
-            backgroundImage: `url(${urls[6]})`
           }"
         />
       </div>
@@ -74,7 +109,7 @@ export default {
 
   data() {
     return {
-      maxMockups: 7
+      maxMockups: 4
     }
   },
 
@@ -83,7 +118,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap'
+          'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -95,87 +130,110 @@ export default {
 </script>
 
 <style>
-*,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato';
+  font-family: 'Source Sans Pro';
 }
+
 .container {
-  width: 720px;
-  height: 480px;
+  width: 834px;
+  height: 556px;
+  position: relative;
   overflow: hidden;
-  position: relative;
 }
 
-.main {
+.topBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
   display: flex;
+}
+
+.bottomBackground {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.contentWrapper {
+  display: flex;
+  padding: 100px 0 70px 50px;
   justify-content: space-between;
-  position: relative;
 }
 
-.pattern1 {
-  position: absolute;
-  top: 215px;
-  left: -15px;
-}
-
-.pattern2 {
-  position: absolute;
-  left: 201px;
-  top: -11px;
-}
-
-.content {
-  padding: 50px 0 0 50px;
-  width: 50%;
+.exclusiveImage {
+  margin-bottom: 18px;
+  margin-top: -35px;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 130%;
-  width: 215px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  max-width: 350px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
-.total {
-  padding: 15px 0 40px 0;
-  line-height: 130%;
-  color: #9f9faf;
-  width: 215px;
-  font-weight: 300;
-  font-family: 'Roboto';
-  font-size: 21px;
+.numberText {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 72px;
+  margin-bottom: 21px;
 }
 
-.firstColumn {
-  margin-right: 20px;
-  transform: rotate(5deg);
-  margin-top: -20px;
+.formatBadgeWrapper {
+  display: flex;
 }
 
-.secondColumn {
-  transform: rotate(5deg);
-  margin-top: -30px;
+.formatBadge {
+  min-width: 50px;
+  height: 28px;
+  padding: 0 5px;
+  background: #000000;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
 }
 
-.last {
-  position: absolute;
-  bottom: 10px;
-  left: 65px;
-  transform: rotate(5deg);
-}
-
-.wrapper {
-  width: 200px;
-  height: 150px;
-  margin: 20px 0;
+.previewImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.06), 0px 4px 10px rgba(0, 0, 0, 0.02),
-    0px 1px 4px rgba(0, 0, 0, 0.03);
-  border-radius: 10px;
+  position: absolute;
+}
+
+.image1 {
+  width: 195px;
+  height: 195px;
+  left: 365px;
+  top: 5px;
+  transform: rotate(-15deg);
+}
+
+.image2 {
+  width: 177px;
+  height: 177px;
+  right: 7px;
+  top: 7px;
+  transform: rotate(10deg);
+}
+
+.image3 {
+  width: 280px;
+  height: 280px;
+  right: 70px;
+  bottom: 0px;
+  transform: rotate(15deg);
 }
 </style>

@@ -14,8 +14,10 @@
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.5.5",
     "axios": "^0.26.1",
+    "colorthief": "^2.3.2",
     "lodash": "^4.17.20",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "tinycolor2": "^1.4.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
