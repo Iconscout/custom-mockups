@@ -70,6 +70,7 @@
         </h1>
         <div class="numberText">
           {{ $route.query.total_items }} {{ asset.text }}
+          {{ asset.value === '3d' ? 'Illustrations' : null }}
         </div>
         <div class="formatBadgeWrapper">
           <div v-for="format in formats" :key="format" class="formatBadge">
@@ -109,7 +110,7 @@ export default {
 
   data() {
     return {
-      maxMockups: 4
+      maxMockups: 3
     }
   },
 
@@ -130,16 +131,7 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: 'Source Sans Pro';
-}
-
-.container {
-  width: 834px;
-  height: 556px;
-  position: relative;
-  overflow: hidden;
-}
+@import '~/assets/style/common.css';
 
 .topBackground {
   position: absolute;
@@ -167,40 +159,8 @@ body {
   margin-top: -35px;
 }
 
-.title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 70px;
-  max-width: 350px;
-  max-height: 210px;
-  overflow: hidden;
-}
-
 .numberText {
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 72px;
   margin-bottom: 21px;
-}
-
-.formatBadgeWrapper {
-  display: flex;
-}
-
-.formatBadge {
-  min-width: 50px;
-  height: 28px;
-  padding: 0 5px;
-  background: #000000;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 10px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
 }
 
 .previewImage {
