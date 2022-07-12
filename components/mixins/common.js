@@ -21,7 +21,7 @@ export default {
     return {
       assets: [
         { value: 'illustration', text: 'Illustrations' },
-        { value: '3d', text: '3D Illustrations' },
+        { value: '3d', text: '3Ds' },
         { value: 'icon', text: 'Icons' },
         { value: 'lottie', text: 'Lottie Animations' }
       ],
