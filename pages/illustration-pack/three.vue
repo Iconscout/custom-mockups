@@ -169,6 +169,8 @@ export default {
 }
 
 .imageGrid {
+  position: absolute;
+  right: 20px;
   display: grid;
   grid-template-columns: 136px 136px 136px;
   grid-template-rows: 136px 136px 136px;
